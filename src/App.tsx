@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
 // 컴포넌트
+import KakaoMap from "./map/map";
 
 // ----------------------------------------------------------------------
 
@@ -37,6 +38,7 @@ const App: React.FC = () => {
       <Text>
         <code>cold case</code>
       </Text>
+      <KakaoMap />
     </Box>
   );
 };
