@@ -65,6 +65,8 @@ const KakaoMap: React.FC = () => {
       <MapMarker position={userLocation}>
         <Box style={{ color: "#000" }}>당신의 위치</Box>
       </MapMarker>
+
+      {/* 살인사건 마커 */}
       {coldCases.map((caseData, index) => (
         <MapMarker
           key={index}
@@ -76,7 +78,7 @@ const KakaoMap: React.FC = () => {
             <Box
               style={{
                 display: "flex",
-                width: "100%",
+                width: "10vw",
                 height: "55px",
                 color: "red",
               }}
