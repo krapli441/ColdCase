@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// 리액트 라이브러리
+import React from "react";
 
-function App() {
+// 외부 라이브러리
+
+// Chakra UI
+import { Box, Text } from "@chakra-ui/react";
+
+// 컴포넌트
+
+// ----------------------------------------------------------------------
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box className="App">
+      <Box className="App-header">
+        <Text>
+          <code>cold case</code>
+        </Text>
+      </Box>
+    </Box>
   );
-}
+};
 
 export default App;
