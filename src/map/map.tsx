@@ -20,7 +20,9 @@ const KakaoMap: React.FC = () => {
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
+  const [hoveredCase, setHoveredCase] = useState<number | null>(null);
 
+  // 미제 사건 유형을 하나로 합침
   const coldCases = [...murderCase];
 
   useEffect(() => {
@@ -64,8 +66,24 @@ const KakaoMap: React.FC = () => {
         <Box style={{ color: "#000" }}>당신의 위치</Box>
       </MapMarker>
       {coldCases.map((caseData, index) => (
-        <MapMarker key={index} position={caseData.latlng}>
-          <Box style={{ color: "#000" }}>{caseData.title}</Box>
+        <MapMarker
+          key={index}
+          position={caseData.latlng}
+          onMouseOver={() => setHoveredCase(index)} // 마우스 오버 이벤트
+          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
+        >
+          {hoveredCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+            <Box
+              style={{
+                display: "flex",
+                width: "100%",
+                height: "55px",
+                color: "red",
+              }}
+            >
+              <Text>{caseData.title}</Text>
+            </Box>
+          )}
         </MapMarker>
       ))}
     </Map>
