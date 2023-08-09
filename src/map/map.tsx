@@ -8,7 +8,7 @@ import getCurrentPosition from "./geolocation";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 // Chakra UI
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Spinner } from "@chakra-ui/react";
 
 //
 
@@ -34,7 +34,21 @@ const KakaoMap: React.FC = () => {
   }, []);
 
   if (loading || !userLocation) {
-    return <Text color={"red"}>지도를 불러오는 중입니다.</Text>;
+    return (
+      <>
+        <Box
+          className="loading-screen"
+          display={"flex"}
+          flexDirection={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          gap={"1rem"}
+        >
+          <Spinner color='red.500' size={"lg"}/>
+          <Text color={"white"}>지도를 불러오는 중입니다.</Text>
+        </Box>
+      </>
+    );
   }
 
   return (
