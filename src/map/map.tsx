@@ -20,6 +20,7 @@ const KakaoMap: React.FC = () => {
 
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     getCurrentPosition()
       .then((coords) => {
@@ -57,7 +58,7 @@ const KakaoMap: React.FC = () => {
       style={{ width: "90vw", height: "80vh" }}
       level={13}
     >
-      <MapMarker position={userLocation}>
+      <MapMarker position={userLocation} >
         <Box style={{ color: "#000" }}>당신의 위치</Box>
       </MapMarker>
     </Map>
