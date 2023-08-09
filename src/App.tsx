@@ -20,11 +20,9 @@ const appStyle = {
 const App: React.FC = () => {
   return (
     <Box className="App" style={appStyle}>
-      <Box className="App-header">
         <Text>
           <code>cold case</code>
         </Text>
-      </Box>
     </Box>
   );
 };
