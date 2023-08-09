@@ -10,9 +10,16 @@ import { Box, Text } from "@chakra-ui/react";
 
 // ----------------------------------------------------------------------
 
+const appStyle = {
+  display: "flex",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "black",
+};
+
 const App: React.FC = () => {
   return (
-    <Box className="App">
+    <Box className="App" style={appStyle}>
       <Box className="App-header">
         <Text>
           <code>cold case</code>
