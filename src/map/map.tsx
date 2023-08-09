@@ -65,7 +65,7 @@ const KakaoMap: React.FC = () => {
       </MapMarker>
       {coldCases.map((caseData, index) => (
         <MapMarker key={index} position={caseData.latlng}>
-          <div style={{ color: "#000" }}>{caseData.title}</div>
+          <Box style={{ color: "#000" }}>{caseData.title}</Box>
         </MapMarker>
       ))}
     </Map>
