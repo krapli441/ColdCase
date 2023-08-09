@@ -1,4 +1,4 @@
-const murderCase = [
+const murderCaseData = [
   { title: "A 살인사건", latlng: { lat: 37.5665, lng: 126.978 } },
 
   { title: "B 살인사건", latlng: { lat: 37.5765, lng: 126.998 } },
@@ -10,4 +10,4 @@ const murderCase = [
   { title: "E 살인사건", latlng: { lat: 37.6065, lng: 126.958 } },
 ];
 
-export default murderCase;
+export default murderCaseData;

@@ -9,6 +9,7 @@ import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 // Chakra UI
 import { Box, Text, Spinner } from "@chakra-ui/react";
+import murderCase from "../case/murderCase";
 
 //
 
@@ -20,6 +21,7 @@ const KakaoMap: React.FC = () => {
 
   const [loading, setLoading] = useState(true);
 
+  const coldCases = [...murderCase];
 
   useEffect(() => {
     getCurrentPosition()
@@ -45,7 +47,7 @@ const KakaoMap: React.FC = () => {
           alignItems={"center"}
           gap={"1rem"}
         >
-          <Spinner color='red.500' size={"lg"}/>
+          <Spinner color="red.500" size={"lg"} />
           <Text color={"white"}>지도를 불러오는 중입니다.</Text>
         </Box>
       </>
@@ -58,9 +60,14 @@ const KakaoMap: React.FC = () => {
       style={{ width: "90vw", height: "80vh" }}
       level={13}
     >
-      <MapMarker position={userLocation} >
+      <MapMarker position={userLocation}>
         <Box style={{ color: "#000" }}>당신의 위치</Box>
       </MapMarker>
+      {coldCases.map((caseData, index) => (
+        <MapMarker key={index} position={caseData.latlng}>
+          <div style={{ color: "#000" }}>{caseData.title}</div>
+        </MapMarker>
+      ))}
     </Map>
   );
 };
