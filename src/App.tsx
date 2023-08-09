@@ -20,8 +20,6 @@ const appStyle = {
   backgroundColor: "black",
 };
 
-const apiKey = process.env.REACT_APP_MAPS_API;
-
 const App: React.FC = () => {
   return (
     <Box className="App" style={appStyle}>
