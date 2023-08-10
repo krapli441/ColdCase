@@ -8,7 +8,8 @@ import getCurrentPosition from "./geolocation";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 // Chakra UI
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, Spinner } from "@chakra-ui/react";
+import murderCase from "../case/murderCase";
 
 //
 
@@ -19,6 +20,10 @@ const KakaoMap: React.FC = () => {
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
+  const [hoveredCase, setHoveredCase] = useState<number | null>(null);
+
+  // 미제 사건 유형을 하나로 합침
+  const coldCases = [...murderCase];
 
   useEffect(() => {
     getCurrentPosition()
@@ -34,7 +39,21 @@ const KakaoMap: React.FC = () => {
   }, []);
 
   if (loading || !userLocation) {
-    return <Text color={"red"}>지도를 불러오는 중입니다.</Text>;
+    return (
+      <>
+        <Box
+          className="loading-screen"
+          display={"flex"}
+          flexDirection={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          gap={"1rem"}
+        >
+          <Spinner color="red.500" size={"lg"} />
+          <Text color={"white"}>지도를 불러오는 중입니다.</Text>
+        </Box>
+      </>
+    );
   }
 
   return (
@@ -46,6 +65,29 @@ const KakaoMap: React.FC = () => {
       <MapMarker position={userLocation}>
         <Box style={{ color: "#000" }}>당신의 위치</Box>
       </MapMarker>
+
+      {/* 살인사건 마커 */}
+      {coldCases.map((caseData, index) => (
+        <MapMarker
+          key={index}
+          position={caseData.latlng}
+          onMouseOver={() => setHoveredCase(index)} // 마우스 오버 이벤트
+          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
+        >
+          {hoveredCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+            <Box
+              style={{
+                display: "flex",
+                width: "10vw",
+                height: "55px",
+                color: "red",
+              }}
+            >
+              <Text>{caseData.title}</Text>
+            </Box>
+          )}
+        </MapMarker>
+      ))}
     </Map>
   );
 };
