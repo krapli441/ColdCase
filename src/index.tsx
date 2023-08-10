@@ -9,6 +9,10 @@ import reportWebVitals from "./reportWebVitals";
 // Chakra UI
 import { ChakraProvider } from "@chakra-ui/react";
 
+// 컴포넌트
+import "./index.css";
+import App from "./App";
+
 // Firebase
 
 // Import the functions you need from the SDKs you need
@@ -32,10 +36,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-// 컴포넌트
-import "./index.css";
-import App from "./App";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
