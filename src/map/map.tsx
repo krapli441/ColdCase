@@ -95,7 +95,7 @@ const KakaoMap: React.FC = () => {
                 display: "flex",
                 width: "10vw",
                 height: "55px",
-                color: "red",
+                color: "black",
               }}
             >
               <Text>{caseData.title}</Text>
@@ -124,7 +124,7 @@ const KakaoMap: React.FC = () => {
                 display: "flex",
                 width: "10vw",
                 height: "55px",
-                color: "red",
+                color: "black",
               }}
             >
               <Text>{caseData.title}</Text>
@@ -153,7 +153,7 @@ const KakaoMap: React.FC = () => {
                 display: "flex",
                 width: "10vw",
                 height: "55px",
-                color: "red",
+                color: "black",
               }}
             >
               <Text>{caseData.title}</Text>
