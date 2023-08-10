@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 // 리액트 컴포넌트
 import getCurrentPosition from "./geolocation";
+import Kill from "../img/kill.png"
 
 // 외부 라이브러리
 import { Map, MapMarker } from "react-kakao-maps-sdk";
@@ -71,6 +72,13 @@ const KakaoMap: React.FC = () => {
           position={caseData.latlng}
           onMouseOver={() => setHoveredCase(index)} // 마우스 오버 이벤트
           onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
+          image={{
+            src: "./img/kill.png", // 마커이미지의 주소입니다
+            size: {
+              width: 24,
+              height: 35,
+            }, // 마커이미지의 크기입니다
+          }}
         >
           {hoveredCase === index && ( // 마우스 오버된 마커만 인포박스 표시
             <Box
