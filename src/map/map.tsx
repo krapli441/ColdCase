@@ -13,6 +13,7 @@ import { Box, Text, Spinner } from "@chakra-ui/react";
 // 사건 데이터
 import murderCase from "../case/murderCase"; // 살인사건 데이터
 import missingCase from "../case/missingCase"; // 실종사건 데이터
+import unknownCase from "../case/unknownCase"; // 의문사 사건 데이터
 
 const KakaoMap: React.FC = () => {
   const [userLocation, setUserLocation] = useState<{
@@ -21,11 +22,18 @@ const KakaoMap: React.FC = () => {
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
-  const [hoveredCase, setHoveredCase] = useState<number | null>(null);
+  const [hoveredMurderCase, setHoveredCase] = useState<number | null>(null);
+  const [hoveredMissingCase, setHoveredMissingCase] = useState<number | null>(
+    null
+  );
+  const [hoveredUnknownCase, setHoveredUnknownCase] = useState<number | null>(
+    null
+  );
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
   const missing = [...missingCase];
+  const unknown = [...unknownCase];
 
   useEffect(() => {
     getCurrentPosition()
@@ -81,7 +89,7 @@ const KakaoMap: React.FC = () => {
             }, // 마커이미지의 크기입니다
           }}
         >
-          {hoveredCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+          {hoveredMurderCase === index && ( // 마우스 오버된 마커만 인포박스 표시
             <Box
               style={{
                 display: "flex",
@@ -95,13 +103,13 @@ const KakaoMap: React.FC = () => {
           )}
         </MapMarker>
       ))}
-      {/* 살인사건 마커 */}
+      {/* 실종사건 마커 */}
       {missing.map((caseData, index) => (
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => setHoveredCase(index)} // 마우스 오버 이벤트
-          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
+          onMouseOver={() => setHoveredMissingCase(index)} // 마우스 오버 이벤트
+          onMouseOut={() => setHoveredMissingCase(null)} // 마우스 아웃 이벤트
           image={{
             src: "./img/missing.png", // 마커이미지의 주소입니다
             size: {
@@ -110,7 +118,36 @@ const KakaoMap: React.FC = () => {
             }, // 마커이미지의 크기입니다
           }}
         >
-          {hoveredCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+          {hoveredMissingCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+            <Box
+              style={{
+                display: "flex",
+                width: "10vw",
+                height: "55px",
+                color: "red",
+              }}
+            >
+              <Text>{caseData.title}</Text>
+            </Box>
+          )}
+        </MapMarker>
+      ))}
+      {/* 의문사 사건 마커 */}
+      {unknown.map((caseData, index) => (
+        <MapMarker
+          key={index}
+          position={caseData.latlng}
+          onMouseOver={() => setHoveredUnknownCase(index)} // 마우스 오버 이벤트
+          onMouseOut={() => setHoveredUnknownCase(null)} // 마우스 아웃 이벤트
+          image={{
+            src: "./img/unknown.png", // 마커이미지의 주소입니다
+            size: {
+              width: 24,
+              height: 35,
+            }, // 마커이미지의 크기입니다
+          }}
+        >
+          {hoveredUnknownCase === index && ( // 마우스 오버된 마커만 인포박스 표시
             <Box
               style={{
                 display: "flex",
