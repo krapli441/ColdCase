@@ -62,9 +62,7 @@ const KakaoMap: React.FC = () => {
       style={{ width: "90vw", height: "80vh" }}
       level={13}
     >
-      <MapMarker position={userLocation}>
-        
-      </MapMarker>
+      <MapMarker position={userLocation}></MapMarker>
 
       {/* 살인사건 마커 */}
       {coldCases.map((caseData, index) => (
