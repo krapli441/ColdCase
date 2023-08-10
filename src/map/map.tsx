@@ -63,7 +63,7 @@ const KakaoMap: React.FC = () => {
       level={13}
     >
       <MapMarker position={userLocation}>
-        <Box style={{ color: "#000" }}>당신의 위치</Box>
+        <Box style={{ color: "#000" }}>현재 위치</Box>
       </MapMarker>
 
       {/* 살인사건 마커 */}
