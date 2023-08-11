@@ -8,7 +8,7 @@ import getCurrentPosition from "./geolocation";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 // Chakra UI
-import { Box, Text, Spinner } from "@chakra-ui/react";
+import { Box, Text, Spinner, Image } from "@chakra-ui/react";
 
 // 사건 데이터
 import murderCase from "../case/murderCase"; // 살인사건 데이터
@@ -101,15 +101,14 @@ const KakaoMap: React.FC = () => {
         >
           {openedMurderCaseInfoWindow === index && (
             <Box
-            style={{ padding: "5px", color: "#000" }}
+            style={{ display:"flex", padding: "5px", color: "#000", flexDirection:"row-reverse" }}
             >
-              <img
+              <Image
                 alt="close"
-                width="14"
-                height="13"
+                boxSize={'15px'}
                 src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
                 style={{
-                  position: "absolute",
+                  // position: "absolute",
                   right: "5px",
                   top: "5px",
                   cursor: "pointer",
@@ -118,9 +117,6 @@ const KakaoMap: React.FC = () => {
               />
               <Box
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
                   width: "150px",
                   height: "100%",
                   color: "black",
