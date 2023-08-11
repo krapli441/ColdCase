@@ -149,7 +149,6 @@ number | null
           )}
         </MapMarker>
       ))}
-
        {/* 실종사건 마커 */}
         {missing.map((caseData, index) => (
         <MapMarker
@@ -191,6 +190,70 @@ number | null
                   cursor: "pointer",
                 }}
                 onClick={() => setOpenedMissingCaseInfoWindow(null)}
+              />
+              <Box
+                style={{
+                  width: "150px",
+                  height: "100%",
+                  color: "black",
+                }}
+              >
+                {caseData.title}
+                <br />
+                <a
+                  
+                  style={{ color: "red" }}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  자세히 보기
+                </a>
+              </Box>
+            </Box>
+          )}
+        </MapMarker>
+      ))}
+             {/* 의문사 사건 마커 */}
+             {unknown.map((caseData, index) => (
+        <MapMarker
+          key={index}
+          position={caseData.latlng}
+          onMouseOver={() => {
+            if (openedMissingCaseInfoWindow !== index) {
+              setHoveredCase(index); // 마우스 오버 이벤트
+            }
+          }}
+          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
+          image={{
+            src: "./img/unknown.png", // 마커이미지의 주소입니다
+            size: {
+              width: 24,
+              height: 35,
+            }, // 마커이미지의 크기입니다
+          }}
+          clickable={true}
+          onClick={() => setOpenedUnknownCaseInfoWindow(index)}
+        >
+          {openedUnknownCaseInfoWindow === index && (
+            <Box
+              style={{
+                display: "flex",
+                padding: "5px",
+                color: "#000",
+                flexDirection: "row-reverse",
+              }}
+            >
+              <Image
+                alt="close"
+                boxSize={"15px"}
+                src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
+                style={{
+                  // position: "absolute",
+                  right: "5px",
+                  top: "5px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setOpenedUnknownCaseInfoWindow(null)}
               />
               <Box
                 style={{
