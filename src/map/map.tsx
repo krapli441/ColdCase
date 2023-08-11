@@ -8,7 +8,8 @@ import getCurrentPosition from "./geolocation";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 // Chakra UI
-import { Box, Text, Spinner, Image } from "@chakra-ui/react";
+import { Box, Text, Spinner, Image, Link } from "@chakra-ui/react";
+import { BiLinkExternal } from "react-icons/bi";
 
 // 사건 데이터
 import murderCase from "../case/murderCase"; // 살인사건 데이터
@@ -23,23 +24,15 @@ const KakaoMap: React.FC = () => {
 
   const [loading, setLoading] = useState(true);
   const [hoveredMurderCase, setHoveredCase] = useState<number | null>(null);
-  const [hoveredMissingCase, setHoveredMissingCase] = useState<number | null>(
-    null
-  );
-  const [hoveredUnknownCase, setHoveredUnknownCase] = useState<number | null>(
-    null
-  );
   const [openedMurderCaseInfoWindow, setOpenedMurderCaseInfoWindow] = useState<
     number | null
   >(null); // 살인사건 클릭에 대한 상태 관리
 
-  const [openedMissingCaseInfoWindow, setOpenedMissingCaseInfoWindow] = useState<
-  number | null
->(null); // 살인사건 클릭에 대한 상태 관리
+  const [openedMissingCaseInfoWindow, setOpenedMissingCaseInfoWindow] =
+    useState<number | null>(null); // 실종사건 클릭에 대한 상태 관리
 
-const [openedUnknownCaseInfoWindow, setOpenedUnknownCaseInfoWindow] = useState<
-number | null
->(null); // 살인사건 클릭에 대한 상태 관리
+  const [openedUnknownCaseInfoWindow, setOpenedUnknownCaseInfoWindow] =
+    useState<number | null>(null); // 신원미상 & 의문사 클릭에 대한 상태 관리
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
@@ -136,21 +129,28 @@ number | null
               >
                 {caseData.title}
                 <br />
-                <a
-                  href={caseData.link}
-                  style={{ color: "red" }}
-                  target="_blank"
-                  rel="noreferrer"
+                <Box
+                  className="information"
+                  display={"flex"}
+                  flexDirection={"row"}
+                  alignItems={"center"}
                 >
-                  자세히 보기
-                </a>
+                  <Link
+                    href={caseData.link}
+                    style={{ color: "red" }}
+                    isExternal
+                  >
+                    <Text>자세히 보기</Text>
+                  </Link>
+                  <BiLinkExternal color="black" />
+                </Box>
               </Box>
             </Box>
           )}
         </MapMarker>
       ))}
-       {/* 실종사건 마커 */}
-        {missing.map((caseData, index) => (
+      {/* 실종사건 마커 */}
+      {missing.map((caseData, index) => (
         <MapMarker
           key={index}
           position={caseData.latlng}
@@ -200,12 +200,7 @@ number | null
               >
                 {caseData.title}
                 <br />
-                <a
-                  
-                  style={{ color: "red" }}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a style={{ color: "red" }} target="_blank" rel="noreferrer">
                   자세히 보기
                 </a>
               </Box>
@@ -213,8 +208,8 @@ number | null
           )}
         </MapMarker>
       ))}
-             {/* 의문사 사건 마커 */}
-             {unknown.map((caseData, index) => (
+      {/* 의문사 사건 마커 */}
+      {unknown.map((caseData, index) => (
         <MapMarker
           key={index}
           position={caseData.latlng}
@@ -264,12 +259,7 @@ number | null
               >
                 {caseData.title}
                 <br />
-                <a
-                  
-                  style={{ color: "red" }}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a style={{ color: "red" }} target="_blank" rel="noreferrer">
                   자세히 보기
                 </a>
               </Box>
