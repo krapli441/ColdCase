@@ -29,6 +29,10 @@ const KakaoMap: React.FC = () => {
   const [hoveredUnknownCase, setHoveredUnknownCase] = useState<number | null>(
     null
   );
+  const [muderCaseIsOpen, setMuderCaseIsOpen] = useState(false);
+  const [openedMurderCaseInfoWindow, setOpenedMurderCaseInfoWindow] = useState<
+    number | null
+  >(null);
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
@@ -74,12 +78,16 @@ const KakaoMap: React.FC = () => {
     >
       <MapMarker position={userLocation}></MapMarker>
 
-      {/* 살인사건 마커 */}
+      {/* ! 살인사건 마커 ! */}
       {murder.map((caseData, index) => (
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => setHoveredCase(index)} // 마우스 오버 이벤트
+          onMouseOver={() => {
+            if (openedMurderCaseInfoWindow !== index) {
+              setHoveredCase(index); // 마우스 오버 이벤트
+            }
+          }}
           onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
           image={{
             src: "./img/kill.png", // 마커이미지의 주소입니다
@@ -88,19 +96,53 @@ const KakaoMap: React.FC = () => {
               height: 35,
             }, // 마커이미지의 크기입니다
           }}
+          clickable={true}
+          onClick={() => setOpenedMurderCaseInfoWindow(index)}
         >
-          {hoveredMurderCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+          {openedMurderCaseInfoWindow === index && (
             <Box
-              style={{
-                display: "flex",
-                width: "10vw",
-                height: "55px",
-                color: "black",
-              }}
+            style={{ padding: "5px", color: "#000" }}
             >
-              <Text>{caseData.title}</Text>
+              <img
+                alt="close"
+                width="14"
+                height="13"
+                src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
+                style={{
+                  position: "absolute",
+                  right: "5px",
+                  top: "5px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setOpenedMurderCaseInfoWindow(null)}
+              />
+              <Box
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "150px",
+                  height: "100%",
+                  color: "black",
+                }}
+              >
+                {caseData.title}
+              </Box>
             </Box>
           )}
+          {/* {hoveredMurderCase === index &&
+            openedMurderCaseInfoWindow !== index && ( // 마우스 오버된 마커만 인포박스 표시
+              <Box
+                style={{
+                  display: "flex",
+                  width: "10vw",
+                  height: "55px",
+                  color: "black",
+                }}
+              >
+                <Text>{caseData.title}</Text>
+              </Box>
+            )} */}
         </MapMarker>
       ))}
       {/* 실종사건 마커 */}
