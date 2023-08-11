@@ -3,6 +3,7 @@ const murderCaseData = [
     title: "광명 초등학생 유괴살인사건",
     date: "2003년 3월 30일",
     latlng: { lat: 37.435621800000035, lng: 126.87899069999997 },
+    link: "https://news.joins.com/article/224/1000224.html",
   },
   {
     title: "광주 대인동 살인사건",
@@ -75,9 +76,10 @@ const murderCaseData = [
     latlng: { lat: 34.64399199999999, lng: 127.76154159999999 },
   },
   {
-    title: "동해 학습지 여교사 \n 살인사건",
+    title: "동해 학습지 여교사 살인사건",
     date: "",
     latlng: { lat: 37.581072600000006, lng: 129.08273730000002 },
+    link: "https://namu.wiki/w/%EB%8F%99%ED%95%B4%20%ED%95%99%EC%8A%B5%EC%A7%80%20%EC%97%AC%EA%B5%90%EC%82%AC%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
   },
   {
     title: "만봉천 예비간호사 살인사건",

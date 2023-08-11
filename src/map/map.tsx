@@ -29,7 +29,6 @@ const KakaoMap: React.FC = () => {
   const [hoveredUnknownCase, setHoveredUnknownCase] = useState<number | null>(
     null
   );
-  const [muderCaseIsOpen, setMuderCaseIsOpen] = useState(false);
   const [openedMurderCaseInfoWindow, setOpenedMurderCaseInfoWindow] = useState<
     number | null
   >(null);
@@ -101,11 +100,16 @@ const KakaoMap: React.FC = () => {
         >
           {openedMurderCaseInfoWindow === index && (
             <Box
-            style={{ display:"flex", padding: "5px", color: "#000", flexDirection:"row-reverse" }}
+              style={{
+                display: "flex",
+                padding: "5px",
+                color: "#000",
+                flexDirection: "row-reverse",
+              }}
             >
               <Image
                 alt="close"
-                boxSize={'15px'}
+                boxSize={"15px"}
                 src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
                 style={{
                   // position: "absolute",
@@ -123,6 +127,15 @@ const KakaoMap: React.FC = () => {
                 }}
               >
                 {caseData.title}
+                <br />
+                <a
+                  href={caseData.link}
+                  style={{ color: "red" }}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  자세히 보기
+                </a>
               </Box>
             </Box>
           )}
