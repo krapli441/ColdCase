@@ -199,9 +199,22 @@ const KakaoMap: React.FC = () => {
                 }}
               >
                 {caseData.title}
-                <Link href={caseData.link} style={{ color: "red" }} isExternal>
-                  <Text>자세히 보기</Text>
-                </Link>
+                <br/>
+                <Box
+                  className="information"
+                  display={"flex"}
+                  flexDirection={"row"}
+                  alignItems={"center"}
+                >
+                  <Link
+                    href={caseData.link}
+                    style={{ color: "red" }}
+                    isExternal
+                  >
+                    <Text>자세히 보기</Text>
+                  </Link>
+                  <BiLinkExternal color="black" />
+                </Box>
               </Box>
             </Box>
           )}
@@ -257,9 +270,22 @@ const KakaoMap: React.FC = () => {
                 }}
               >
                 {caseData.title}
-                <Link href={caseData.link} style={{ color: "red" }} isExternal>
-                  <Text>자세히 보기</Text>
-                </Link>
+                <br/>
+                <Box
+                  className="information"
+                  display={"flex"}
+                  flexDirection={"row"}
+                  alignItems={"center"}
+                >
+                  <Link
+                    href={caseData.link}
+                    style={{ color: "red" }}
+                    isExternal
+                  >
+                    <Text>자세히 보기</Text>
+                  </Link>
+                  <BiLinkExternal color="black" />
+                </Box>
               </Box>
             </Box>
           )}
