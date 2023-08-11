@@ -8,6 +8,7 @@ import { Box, Text } from "@chakra-ui/react";
 
 // 컴포넌트
 import KakaoMap from "./map/map";
+import DisclaimerModal from "./modal";
 
 // ----------------------------------------------------------------------
 
@@ -24,6 +25,7 @@ const App: React.FC = () => {
   return (
     <Box className="App" style={appStyle}>
       <KakaoMap />
+      <DisclaimerModal/>
     </Box>
   );
 };
