@@ -48,7 +48,7 @@ const DisclaimerModal = () => {
               안내문
             </ModalHeader>
             <ModalCloseButton />
-            <ModalBody textAlign={"center"} fontSize={"24px"}>
+            <ModalBody textAlign={"center"} fontSize={{ base: "14px", sm: "20px", md: "24px", lg: "24px" }}>
               이 사이트는 대한민국에서 발생한 미제 사건들을 기록하는
               사이트입니다.
               <br />
@@ -56,7 +56,7 @@ const DisclaimerModal = () => {
               <Box className="murderText" style={textStyle}>
                 <Image
                   src="./img/kill.png"
-                  boxSize={"24px"}
+                  boxSize={{ base: "14px", sm: "24px", md: "24px", lg: "24px" }}
                   marginRight={"5px"}
                 />
                 <Text as="span" fontWeight="bold" color="red">
@@ -67,7 +67,7 @@ const DisclaimerModal = () => {
               <Box className="missingText" style={textStyle}>
                 <Image
                   src="./img/missing.png"
-                  boxSize={"24px"}
+                  boxSize={{ base: "14px", sm: "24px", md: "24px", lg: "24px" }}
                   marginRight={"5px"}
                 />
                 <Text as="span" fontWeight="bold" color="yellow.400">
@@ -78,7 +78,7 @@ const DisclaimerModal = () => {
               <Box className="unknownText" style={textStyle}>
                 <Image
                   src="./img/unknown.png"
-                  boxSize={"24px"}
+                  boxSize={{ base: "14px", sm: "24px", md: "24px", lg: "24px" }}
                   marginRight={"5px"}
                 />
                 <Text as="span" fontWeight="bold" color="purple">
