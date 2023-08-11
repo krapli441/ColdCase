@@ -22,13 +22,15 @@ const KakaoMap: React.FC = () => {
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
-  const [hoveredMurderCase, setHoveredCase] = useState<number | null>(null);
-  const [hoveredMissingCase, setHoveredMissingCase] = useState<number | null>(
-    null
-  );
-  const [hoveredUnknownCase, setHoveredUnknownCase] = useState<number | null>(
-    null
-  );
+  const [hoveredCases, setHoveredCases] = useState<{
+    murder: number | null;
+    missing: number | null;
+    unknown: number | null;
+  }>({
+    murder: null,
+    missing: null,
+    unknown: null,
+  });
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
@@ -79,8 +81,10 @@ const KakaoMap: React.FC = () => {
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => setHoveredCase(index)} // 마우스 오버 이벤트
-          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
+          onMouseOver={() =>
+            setHoveredCases({ ...hoveredCases, murder: index })
+          }
+          onMouseOut={() => setHoveredCases({ ...hoveredCases, murder: null })}
           image={{
             src: "./img/kill.png", // 마커이미지의 주소입니다
             size: {
@@ -89,7 +93,7 @@ const KakaoMap: React.FC = () => {
             }, // 마커이미지의 크기입니다
           }}
         >
-          {hoveredMurderCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+          {hoveredCases.murder === index && ( // 마우스 오버된 살인사건 마커만 인포박스 표시
             <Box
               style={{
                 display: "flex",
@@ -108,8 +112,10 @@ const KakaoMap: React.FC = () => {
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => setHoveredMissingCase(index)} // 마우스 오버 이벤트
-          onMouseOut={() => setHoveredMissingCase(null)} // 마우스 아웃 이벤트
+          onMouseOver={() =>
+            setHoveredCases({ ...hoveredCases, missing: index })
+          }
+          onMouseOut={() => setHoveredCases({ ...hoveredCases, missing: null })}
           image={{
             src: "./img/missing.png", // 마커이미지의 주소입니다
             size: {
@@ -118,7 +124,7 @@ const KakaoMap: React.FC = () => {
             }, // 마커이미지의 크기입니다
           }}
         >
-          {hoveredMissingCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+          {hoveredCases.missing === index && ( // 마우스 오버된 실종사건 마커만 인포박스 표시
             <Box
               style={{
                 display: "flex",
@@ -137,8 +143,10 @@ const KakaoMap: React.FC = () => {
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => setHoveredUnknownCase(index)} // 마우스 오버 이벤트
-          onMouseOut={() => setHoveredUnknownCase(null)} // 마우스 아웃 이벤트
+          onMouseOver={() =>
+            setHoveredCases({ ...hoveredCases, unknown: index })
+          }
+          onMouseOut={() => setHoveredCases({ ...hoveredCases, unknown: null })}
           image={{
             src: "./img/unknown.png", // 마커이미지의 주소입니다
             size: {
@@ -147,7 +155,7 @@ const KakaoMap: React.FC = () => {
             }, // 마커이미지의 크기입니다
           }}
         >
-          {hoveredUnknownCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+          {hoveredCases.unknown === index && ( // 마우스 오버된 의문사 사건 마커만 인포박스 표시
             <Box
               style={{
                 display: "flex",
