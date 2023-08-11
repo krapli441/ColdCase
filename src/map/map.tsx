@@ -31,7 +31,15 @@ const KakaoMap: React.FC = () => {
   );
   const [openedMurderCaseInfoWindow, setOpenedMurderCaseInfoWindow] = useState<
     number | null
-  >(null);
+  >(null); // 살인사건 클릭에 대한 상태 관리
+
+  const [openedMissingCaseInfoWindow, setOpenedMissingCaseInfoWindow] = useState<
+  number | null
+>(null); // 살인사건 클릭에 대한 상태 관리
+
+const [openedUnknownCaseInfoWindow, setOpenedUnknownCaseInfoWindow] = useState<
+number | null
+>(null); // 살인사건 클릭에 대한 상태 관리
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
@@ -139,28 +147,20 @@ const KakaoMap: React.FC = () => {
               </Box>
             </Box>
           )}
-          {/* {hoveredMurderCase === index &&
-            openedMurderCaseInfoWindow !== index && ( // 마우스 오버된 마커만 인포박스 표시
-              <Box
-                style={{
-                  display: "flex",
-                  width: "10vw",
-                  height: "55px",
-                  color: "black",
-                }}
-              >
-                <Text>{caseData.title}</Text>
-              </Box>
-            )} */}
         </MapMarker>
       ))}
-      {/* 실종사건 마커 */}
-      {missing.map((caseData, index) => (
+
+       {/* 실종사건 마커 */}
+        {missing.map((caseData, index) => (
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => setHoveredMissingCase(index)} // 마우스 오버 이벤트
-          onMouseOut={() => setHoveredMissingCase(null)} // 마우스 아웃 이벤트
+          onMouseOver={() => {
+            if (openedMissingCaseInfoWindow !== index) {
+              setHoveredCase(index); // 마우스 오버 이벤트
+            }
+          }}
+          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
           image={{
             src: "./img/missing.png", // 마커이미지의 주소입니다
             size: {
@@ -168,46 +168,48 @@ const KakaoMap: React.FC = () => {
               height: 35,
             }, // 마커이미지의 크기입니다
           }}
+          clickable={true}
+          onClick={() => setOpenedMissingCaseInfoWindow(index)}
         >
-          {hoveredMissingCase === index && ( // 마우스 오버된 마커만 인포박스 표시
+          {openedMissingCaseInfoWindow === index && (
             <Box
               style={{
                 display: "flex",
-                width: "10vw",
-                height: "55px",
-                color: "black",
+                padding: "5px",
+                color: "#000",
+                flexDirection: "row-reverse",
               }}
             >
-              <Text>{caseData.title}</Text>
-            </Box>
-          )}
-        </MapMarker>
-      ))}
-      {/* 의문사 사건 마커 */}
-      {unknown.map((caseData, index) => (
-        <MapMarker
-          key={index}
-          position={caseData.latlng}
-          onMouseOver={() => setHoveredUnknownCase(index)} // 마우스 오버 이벤트
-          onMouseOut={() => setHoveredUnknownCase(null)} // 마우스 아웃 이벤트
-          image={{
-            src: "./img/unknown.png", // 마커이미지의 주소입니다
-            size: {
-              width: 24,
-              height: 35,
-            }, // 마커이미지의 크기입니다
-          }}
-        >
-          {hoveredUnknownCase === index && ( // 마우스 오버된 마커만 인포박스 표시
-            <Box
-              style={{
-                display: "flex",
-                width: "10vw",
-                height: "55px",
-                color: "black",
-              }}
-            >
-              <Text>{caseData.title}</Text>
+              <Image
+                alt="close"
+                boxSize={"15px"}
+                src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
+                style={{
+                  // position: "absolute",
+                  right: "5px",
+                  top: "5px",
+                  cursor: "pointer",
+                }}
+                onClick={() => setOpenedMissingCaseInfoWindow(null)}
+              />
+              <Box
+                style={{
+                  width: "150px",
+                  height: "100%",
+                  color: "black",
+                }}
+              >
+                {caseData.title}
+                <br />
+                <a
+                  
+                  style={{ color: "red" }}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  자세히 보기
+                </a>
+              </Box>
             </Box>
           )}
         </MapMarker>
