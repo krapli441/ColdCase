@@ -31,6 +31,7 @@ const KakaoMap: React.FC = () => {
     missing: null,
     unknown: null,
   });
+  const [clickedCase, setClickedCase] = useState<number | null>(null);
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
