@@ -102,10 +102,12 @@ const KakaoMap: React.FC = () => {
             <CustomOverlayMap position={caseData.latlng}>
               <Box
                 style={{
-                  display: "flex",
-                  padding: "5px",
+                  position: "absolute",
+                  bottom: "45px", // 마커 높이에 맞게 조정
+                  left: "50%", // 부모 요소의 중앙에 위치
+                  transform: "translateX(-50%)", // 자신의 너비의 절반만큼 왼쪽으로 이동
                   color: "#000",
-                  flexDirection: "row-reverse",
+                  backgroundColor: "yellow",
                 }}
               >
                 <Image
@@ -122,7 +124,8 @@ const KakaoMap: React.FC = () => {
                 />
                 <Box
                   style={{
-                    width: "150px",
+                    width: "max-content",
+                    padding: "5px",
                     height: "100%",
                     color: "black",
                   }}
