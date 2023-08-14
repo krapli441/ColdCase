@@ -7,8 +7,13 @@ interface CaseMarkerProps {
   caseData: any;
   index: number;
   imageSrc: string;
-  openedInfoWindow: number | null;
-  setOpenedInfoWindow: (value: number | null) => void;
+  openedInfoWindow: {
+    caseData: any;
+    position: { lat: number; lng: number };
+  } | null;
+  setOpenedInfoWindow: (
+    value: { caseData: any; position: { lat: number; lng: number } } | null
+  ) => void;
 }
 
 const CaseMarker: React.FC<CaseMarkerProps> = ({
@@ -24,9 +29,11 @@ const CaseMarker: React.FC<CaseMarkerProps> = ({
       position={caseData.latlng}
       image={{ src: imageSrc, size: { width: 24, height: 35 } }}
       clickable={true}
-      onClick={() => setOpenedInfoWindow(index)}
+      onClick={() =>
+        setOpenedInfoWindow({ caseData, position: caseData.latlng })
+      }
     >
-      {openedInfoWindow === index && (
+      {openedInfoWindow && openedInfoWindow.caseData.id === index && (
         <Box>
           {caseData.title}
           <br />
