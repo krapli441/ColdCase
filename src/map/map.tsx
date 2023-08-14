@@ -16,6 +16,19 @@ import murderCase from "../case/murderCase"; // 살인사건 데이터
 import missingCase from "../case/missingCase"; // 실종사건 데이터
 import unknownCase from "../case/unknownCase"; // 의문사 사건 데이터
 
+// 커스텀 오버레이 스타일
+
+const infoWindowStyle = {
+  bottom: "40px", // 마커 높이에 맞게 조정
+  padding: "5px",
+  left: "50%", // 부모 요소의 중앙에 위치
+  transform: "translateX(-50%)", // 자신의 너비의 절반만큼 왼쪽으로 이동
+  color: "#000",
+  backgroundColor: "white",
+  borderRadius: "5px",
+  boxShadow: "1px 1px 5px 1px rgba(0,0,0,0.5)",
+};
+
 const KakaoMap: React.FC = () => {
   const [userLocation, setUserLocation] = useState<{
     lat: number;
@@ -82,7 +95,7 @@ const KakaoMap: React.FC = () => {
         onClick={() => setIsOpen(true)}
       ></MapMarker>
 
-      {/* ! 살인사건 마커 ! */}
+      {/* 살인사건 마커 */}
       {murder.map((caseData, index) => (
         <>
           <MapMarker
@@ -100,22 +113,12 @@ const KakaoMap: React.FC = () => {
           />
           {openedMurderCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
-              <Box
-                style={{
-                  position: "absolute",
-                  bottom: "45px", // 마커 높이에 맞게 조정
-                  left: "50%", // 부모 요소의 중앙에 위치
-                  transform: "translateX(-50%)", // 자신의 너비의 절반만큼 왼쪽으로 이동
-                  color: "#000",
-                  backgroundColor: "yellow",
-                }}
-              >
+              <Box style={infoWindowStyle} position={"absolute"}>
                 <Image
                   alt="close"
                   boxSize={"15px"}
                   src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
                   style={{
-                    // position: "absolute",
                     right: "5px",
                     top: "5px",
                     cursor: "pointer",
@@ -155,133 +158,125 @@ const KakaoMap: React.FC = () => {
       ))}
       {/* 실종사건 마커 */}
       {missing.map((caseData, index) => (
-        <MapMarker
-          key={index}
-          position={caseData.latlng}
-          image={{
-            src: "./img/missing.png", // 마커이미지의 주소입니다
-            size: {
-              width: 24,
-              height: 35,
-            }, // 마커이미지의 크기입니다
-          }}
-          clickable={true}
-          onClick={() => setOpenedMissingCaseInfoWindow(index)}
-        >
+        <>
+          <MapMarker
+            key={index}
+            position={caseData.latlng}
+            image={{
+              src: "./img/missing.png", // 마커이미지의 주소입니다
+              size: {
+                width: 24,
+                height: 35,
+              }, // 마커이미지의 크기입니다
+            }}
+            clickable={true}
+            onClick={() => setOpenedMissingCaseInfoWindow(index)}
+          />
           {openedMissingCaseInfoWindow === index && (
-            <Box
-              style={{
-                display: "flex",
-                padding: "5px",
-                color: "#000",
-                flexDirection: "row-reverse",
-              }}
-            >
-              <Image
-                alt="close"
-                boxSize={"15px"}
-                src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
-                style={{
-                  // position: "absolute",
-                  right: "5px",
-                  top: "5px",
-                  cursor: "pointer",
-                }}
-                onClick={() => setOpenedMissingCaseInfoWindow(null)}
-              />
-              <Box
-                style={{
-                  width: "150px",
-                  height: "100%",
-                  color: "black",
-                }}
-              >
-                {caseData.title}
-                <br />
+            <CustomOverlayMap position={caseData.latlng}>
+              <Box style={infoWindowStyle} position={"absolute"}>
+                <Image
+                  alt="close"
+                  boxSize={"15px"}
+                  src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
+                  style={{
+                    right: "5px",
+                    top: "5px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setOpenedMissingCaseInfoWindow(null)}
+                />
                 <Box
-                  className="information"
-                  display={"flex"}
-                  flexDirection={"row"}
-                  alignItems={"center"}
+                  style={{
+                    width: "max-content",
+                    padding: "5px",
+                    height: "100%",
+                    color: "black",
+                  }}
                 >
-                  <Link
-                    href={caseData.link}
-                    style={{ color: "red" }}
-                    isExternal
+                  {caseData.title}
+                  <br />
+                  <Box
+                    className="information"
+                    display={"flex"}
+                    flexDirection={"row"}
+                    alignItems={"center"}
                   >
-                    <Text>자세히 보기</Text>
-                  </Link>
-                  <BiLinkExternal color="black" />
+                    <Link
+                      href={caseData.link}
+                      style={{ color: "red" }}
+                      isExternal
+                    >
+                      <Text>자세히 보기</Text>
+                    </Link>
+                    <BiLinkExternal color="black" />
+                  </Box>
                 </Box>
               </Box>
-            </Box>
+            </CustomOverlayMap>
           )}
-        </MapMarker>
+        </>
       ))}
       {/* 의문사 사건 마커 */}
       {unknown.map((caseData, index) => (
-        <MapMarker
-          key={index}
-          position={caseData.latlng}
-          image={{
-            src: "./img/unknown.png", // 마커이미지의 주소입니다
-            size: {
-              width: 24,
-              height: 35,
-            }, // 마커이미지의 크기입니다
-          }}
-          clickable={true}
-          onClick={() => setOpenedUnknownCaseInfoWindow(index)}
-        >
+        <>
+          <MapMarker
+            key={index}
+            position={caseData.latlng}
+            image={{
+              src: "./img/unknown.png", // 마커이미지의 주소입니다
+              size: {
+                width: 24,
+                height: 35,
+              }, // 마커이미지의 크기입니다
+            }}
+            clickable={true}
+            onClick={() => setOpenedUnknownCaseInfoWindow(index)}
+          />
           {openedUnknownCaseInfoWindow === index && (
-            <Box
-              style={{
-                display: "flex",
-                padding: "5px",
-                color: "#000",
-                flexDirection: "row-reverse",
-              }}
-            >
-              <Image
-                alt="close"
-                boxSize={"15px"}
-                src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
-                style={{
-                  // position: "absolute",
-                  right: "5px",
-                  top: "5px",
-                  cursor: "pointer",
-                }}
-                onClick={() => setOpenedUnknownCaseInfoWindow(null)}
-              />
-              <Box
-                style={{
-                  width: "150px",
-                  height: "100%",
-                  color: "black",
-                }}
-              >
-                {caseData.title}
-                <br />
+            <CustomOverlayMap position={caseData.latlng}>
+              <Box style={infoWindowStyle} position={"absolute"}>
+                <Image
+                  alt="close"
+                  boxSize={"15px"}
+                  src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
+                  style={{
+                    right: "5px",
+                    top: "5px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setOpenedUnknownCaseInfoWindow(null)}
+                />
                 <Box
-                  className="information"
-                  display={"flex"}
-                  flexDirection={"row"}
-                  alignItems={"center"}
+                  style={{
+                    width: "max-content",
+                    padding: "5px",
+                    height: "100%",
+                    color: "black",
+                  }}
                 >
-                  <Link
-                    href={caseData.link}
-                    style={{ color: "red" }}
-                    isExternal
+                  {caseData.title}
+                  <br />
+                  <Box
+                    className="information"
+                    display={"flex"}
+                    flexDirection={"row"}
+                    alignItems={"center"}
                   >
-                    <Text>자세히 보기</Text>
-                  </Link>
-                  <BiLinkExternal color="black" />
+                    <Link
+                      href={caseData.link}
+                      style={{ color: "red" }}
+                      isExternal
+                    >
+                      <Text>자세히 보기</Text>
+                    </Link>
+                    <BiLinkExternal color="black" />
+                  </Box>
                 </Box>
               </Box>
-            </Box>
+            </CustomOverlayMap>
           )}
-        </MapMarker>
+        </>
       ))}
     </Map>
   );
