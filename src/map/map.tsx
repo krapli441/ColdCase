@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import getCurrentPosition from "./geolocation";
 
 // 외부 라이브러리
-import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { Map, MapMarker, CustomOverlayMap } from "react-kakao-maps-sdk";
 
 // Chakra UI
 import { Box, Text, Spinner, Image, Link } from "@chakra-ui/react";
@@ -23,7 +23,6 @@ const KakaoMap: React.FC = () => {
   } | null>(null);
 
   const [loading, setLoading] = useState(true);
-  const [hoveredMurderCase, setHoveredCase] = useState<number | null>(null);
   const [openedMurderCaseInfoWindow, setOpenedMurderCaseInfoWindow] = useState<
     number | null
   >(null); // 살인사건 클릭에 대한 상태 관리
@@ -33,6 +32,8 @@ const KakaoMap: React.FC = () => {
 
   const [openedUnknownCaseInfoWindow, setOpenedUnknownCaseInfoWindow] =
     useState<number | null>(null); // 신원미상 & 의문사 클릭에 대한 상태 관리
+
+  const [isOpen, setIsOpen] = useState(false);
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
@@ -76,90 +77,84 @@ const KakaoMap: React.FC = () => {
       style={{ width: "90vw", height: "80vh" }}
       level={13}
     >
-      <MapMarker position={userLocation}></MapMarker>
+      <MapMarker
+        position={userLocation}
+        onClick={() => setIsOpen(true)}
+      ></MapMarker>
 
       {/* ! 살인사건 마커 ! */}
       {murder.map((caseData, index) => (
-        <MapMarker
-          key={index}
-          position={caseData.latlng}
-          onMouseOver={() => {
-            if (openedMurderCaseInfoWindow !== index) {
-              setHoveredCase(index); // 마우스 오버 이벤트
-            }
-          }}
-          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
-          image={{
-            src: "./img/kill.png", // 마커이미지의 주소입니다
-            size: {
-              width: 24,
-              height: 35,
-            }, // 마커이미지의 크기입니다
-          }}
-          clickable={true}
-          onClick={() => setOpenedMurderCaseInfoWindow(index)}
-        >
+        <>
+          <MapMarker
+            key={index}
+            position={caseData.latlng}
+            image={{
+              src: "./img/kill.png", // 마커이미지의 주소입니다
+              size: {
+                width: 24,
+                height: 35,
+              }, // 마커이미지의 크기입니다
+            }}
+            clickable={true}
+            onClick={() => setOpenedMurderCaseInfoWindow(index)}
+          />
           {openedMurderCaseInfoWindow === index && (
-            <Box
-              style={{
-                display: "flex",
-                padding: "5px",
-                color: "#000",
-                flexDirection: "row-reverse",
-              }}
-            >
-              <Image
-                alt="close"
-                boxSize={"15px"}
-                src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
-                style={{
-                  // position: "absolute",
-                  right: "5px",
-                  top: "5px",
-                  cursor: "pointer",
-                }}
-                onClick={() => setOpenedMurderCaseInfoWindow(null)}
-              />
+            <CustomOverlayMap position={caseData.latlng}>
               <Box
                 style={{
-                  width: "150px",
-                  height: "100%",
-                  color: "black",
+                  display: "flex",
+                  padding: "5px",
+                  color: "#000",
+                  flexDirection: "row-reverse",
                 }}
               >
-                {caseData.title}
-                <br />
+                <Image
+                  alt="close"
+                  boxSize={"15px"}
+                  src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
+                  style={{
+                    // position: "absolute",
+                    right: "5px",
+                    top: "5px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setOpenedMurderCaseInfoWindow(null)}
+                />
                 <Box
-                  className="information"
-                  display={"flex"}
-                  flexDirection={"row"}
-                  alignItems={"center"}
+                  style={{
+                    width: "150px",
+                    height: "100%",
+                    color: "black",
+                  }}
                 >
-                  <Link
-                    href={caseData.link}
-                    style={{ color: "red" }}
-                    isExternal
+                  {caseData.title}
+                  <br />
+                  <Box
+                    className="information"
+                    display={"flex"}
+                    flexDirection={"row"}
+                    alignItems={"center"}
                   >
-                    <Text>자세히 보기</Text>
-                  </Link>
-                  <BiLinkExternal color="black" />
+                    <Link
+                      href={caseData.link}
+                      style={{ color: "red" }}
+                      isExternal
+                    >
+                      <Text>자세히 보기</Text>
+                    </Link>
+                    <BiLinkExternal color="black" />
+                  </Box>
                 </Box>
               </Box>
-            </Box>
+            </CustomOverlayMap>
           )}
-        </MapMarker>
+        </>
       ))}
       {/* 실종사건 마커 */}
       {missing.map((caseData, index) => (
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => {
-            if (openedMissingCaseInfoWindow !== index) {
-              setHoveredCase(index); // 마우스 오버 이벤트
-            }
-          }}
-          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
           image={{
             src: "./img/missing.png", // 마커이미지의 주소입니다
             size: {
@@ -199,7 +194,7 @@ const KakaoMap: React.FC = () => {
                 }}
               >
                 {caseData.title}
-                <br/>
+                <br />
                 <Box
                   className="information"
                   display={"flex"}
@@ -225,12 +220,6 @@ const KakaoMap: React.FC = () => {
         <MapMarker
           key={index}
           position={caseData.latlng}
-          onMouseOver={() => {
-            if (openedMissingCaseInfoWindow !== index) {
-              setHoveredCase(index); // 마우스 오버 이벤트
-            }
-          }}
-          onMouseOut={() => setHoveredCase(null)} // 마우스 아웃 이벤트
           image={{
             src: "./img/unknown.png", // 마커이미지의 주소입니다
             size: {
@@ -270,7 +259,7 @@ const KakaoMap: React.FC = () => {
                 }}
               >
                 {caseData.title}
-                <br/>
+                <br />
                 <Box
                   className="information"
                   display={"flex"}
