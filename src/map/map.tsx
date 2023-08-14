@@ -110,7 +110,10 @@ const KakaoMap: React.FC = () => {
           {openedMurderCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
               <Box style={infoWindowStyle} position={"absolute"}>
-                <FiX onClick={() => setOpenedMurderCaseInfoWindow(null)} />
+                <FiX
+                  style={{ border: "1px solid black", borderRadius: "5px" }}
+                  onClick={() => setOpenedMurderCaseInfoWindow(null)}
+                />
                 <Box
                   style={{
                     width: "max-content",
@@ -119,8 +122,7 @@ const KakaoMap: React.FC = () => {
                     color: "black",
                   }}
                 >
-                  {caseData.title}
-                  <br />
+                  <Text fontWeight={"bold"}>{caseData.title}</Text>
                   <Box
                     className="information"
                     display={"flex"}
@@ -129,12 +131,16 @@ const KakaoMap: React.FC = () => {
                   >
                     <Link
                       href={caseData.link}
-                      style={{ color: "red" }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        color: "red",
+                      }}
                       isExternal
                     >
                       <Text>자세히 보기</Text>
+                      <BiLinkExternal color="black" />
                     </Link>
-                    <BiLinkExternal color="black" />
                   </Box>
                 </Box>
               </Box>
@@ -161,7 +167,10 @@ const KakaoMap: React.FC = () => {
           {openedMissingCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
               <Box style={infoWindowStyle} position={"absolute"}>
-                <FiX onClick={() => setOpenedMissingCaseInfoWindow(null)} />
+                <FiX
+                  style={{ border: "1px solid black", borderRadius: "5px" }}
+                  onClick={() => setOpenedMissingCaseInfoWindow(null)}
+                />
                 <Box
                   style={{
                     width: "max-content",
@@ -170,22 +179,25 @@ const KakaoMap: React.FC = () => {
                     color: "black",
                   }}
                 >
-                  {caseData.title}
-                  <br />
                   <Box
                     className="information"
                     display={"flex"}
-                    flexDirection={"row"}
-                    alignItems={"center"}
+                    flexDirection={"column"}
+                    alignItems={"flex-start"}
                   >
+                    <Text fontWeight={"bold"}>{caseData.title}</Text>
                     <Link
                       href={caseData.link}
-                      style={{ color: "red" }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        color: "red",
+                      }}
                       isExternal
                     >
                       <Text>자세히 보기</Text>
+                      <BiLinkExternal color="black" />
                     </Link>
-                    <BiLinkExternal color="black" />
                   </Box>
                 </Box>
               </Box>
@@ -212,7 +224,10 @@ const KakaoMap: React.FC = () => {
           {openedUnknownCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
               <Box style={infoWindowStyle} position={"absolute"}>
-                <FiX onClick={() => setOpenedUnknownCaseInfoWindow(null)} />
+                <FiX
+                  style={{ border: "1px solid black", borderRadius: "5px" }}
+                  onClick={() => setOpenedUnknownCaseInfoWindow(null)}
+                />
                 <Box
                   style={{
                     width: "max-content",
@@ -221,8 +236,7 @@ const KakaoMap: React.FC = () => {
                     color: "black",
                   }}
                 >
-                  {caseData.title}
-                  <br />
+                  <Text fontWeight={"bold"}>{caseData.title}</Text>
                   <Box
                     className="information"
                     display={"flex"}
@@ -231,12 +245,16 @@ const KakaoMap: React.FC = () => {
                   >
                     <Link
                       href={caseData.link}
-                      style={{ color: "red" }}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        color: "red",
+                      }}
                       isExternal
                     >
                       <Text>자세히 보기</Text>
+                      <BiLinkExternal color="black" />
                     </Link>
-                    <BiLinkExternal color="black" />
                   </Box>
                 </Box>
               </Box>
