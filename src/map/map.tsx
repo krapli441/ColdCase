@@ -10,6 +10,7 @@ import { Map, MapMarker, CustomOverlayMap } from "react-kakao-maps-sdk";
 // Chakra UI
 import { Box, Text, Spinner, Image, Link } from "@chakra-ui/react";
 import { BiLinkExternal } from "react-icons/bi";
+import { FiX } from "react-icons/fi";
 
 // 사건 데이터
 import murderCase from "../case/murderCase"; // 살인사건 데이터
@@ -45,8 +46,6 @@ const KakaoMap: React.FC = () => {
 
   const [openedUnknownCaseInfoWindow, setOpenedUnknownCaseInfoWindow] =
     useState<number | null>(null); // 신원미상 & 의문사 클릭에 대한 상태 관리
-
-  const [isOpen, setIsOpen] = useState(false);
 
   // 미제 사건 유형을 하나로 합침
   const murder = [...murderCase];
@@ -90,10 +89,7 @@ const KakaoMap: React.FC = () => {
       style={{ width: "90vw", height: "80vh" }}
       level={13}
     >
-      <MapMarker
-        position={userLocation}
-        onClick={() => setIsOpen(true)}
-      ></MapMarker>
+      <MapMarker position={userLocation}></MapMarker>
 
       {/* 살인사건 마커 */}
       {murder.map((caseData, index) => (
@@ -114,17 +110,7 @@ const KakaoMap: React.FC = () => {
           {openedMurderCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
               <Box style={infoWindowStyle} position={"absolute"}>
-                <Image
-                  alt="close"
-                  boxSize={"15px"}
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
-                  style={{
-                    right: "5px",
-                    top: "5px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => setOpenedMurderCaseInfoWindow(null)}
-                />
+                <FiX onClick={() => setOpenedMurderCaseInfoWindow(null)} />
                 <Box
                   style={{
                     width: "max-content",
@@ -175,17 +161,7 @@ const KakaoMap: React.FC = () => {
           {openedMissingCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
               <Box style={infoWindowStyle} position={"absolute"}>
-                <Image
-                  alt="close"
-                  boxSize={"15px"}
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
-                  style={{
-                    right: "5px",
-                    top: "5px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => setOpenedMissingCaseInfoWindow(null)}
-                />
+                <FiX onClick={() => setOpenedMissingCaseInfoWindow(null)} />
                 <Box
                   style={{
                     width: "max-content",
@@ -236,17 +212,7 @@ const KakaoMap: React.FC = () => {
           {openedUnknownCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
               <Box style={infoWindowStyle} position={"absolute"}>
-                <Image
-                  alt="close"
-                  boxSize={"15px"}
-                  src="https://t1.daumcdn.net/localimg/localimages/07/mapjsapi/2x/bt_close.gif"
-                  style={{
-                    right: "5px",
-                    top: "5px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => setOpenedUnknownCaseInfoWindow(null)}
-                />
+                <FiX onClick={() => setOpenedUnknownCaseInfoWindow(null)} />
                 <Box
                   style={{
                     width: "max-content",
