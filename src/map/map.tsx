@@ -135,6 +135,7 @@ const KakaoMap: React.FC = () => {
                         display: "flex",
                         alignItems: "center",
                         color: "red",
+                        gap: "5px",
                       }}
                       isExternal
                     >
@@ -192,6 +193,7 @@ const KakaoMap: React.FC = () => {
                         display: "flex",
                         alignItems: "center",
                         color: "red",
+                        gap: "5px",
                       }}
                       isExternal
                     >
@@ -249,6 +251,7 @@ const KakaoMap: React.FC = () => {
                         display: "flex",
                         alignItems: "center",
                         color: "red",
+                        gap: "5px",
                       }}
                       isExternal
                     >
