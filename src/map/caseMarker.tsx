@@ -1,14 +1,20 @@
-import { Box, Text, Link } from "@chakra-ui/react";
+// 리액트 라이브러리
 import React from "react";
-import { CustomOverlayMap, MapMarker } from "react-kakao-maps-sdk";
+
+// 외부 라이브러리
+import { Box, Text, Link, Image } from "@chakra-ui/react";
 import { FiX } from "react-icons/fi";
 import { BiLinkExternal } from "react-icons/bi";
+
+// Chakra UI
+import { CustomOverlayMap, MapMarker } from "react-kakao-maps-sdk";
 
 // 타입 정의
 interface CaseData {
   latlng: { lat: number; lng: number };
   title: string;
   link: string;
+  img?: string;
 }
 
 interface CaseMarkersProps {
@@ -57,6 +63,7 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
                 flexDirection={"row-reverse"}
               >
                 <Box
+                  className="caseInformation"
                   style={{
                     display: "flex",
                     width: "max-content",
@@ -72,6 +79,7 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
                     onClick={() => setOpenedCaseInfoWindow(null)}
                     cursor={"pointer"}
                   />
+                  <Image boxSize={"150px"} width={"max-content"}  src={caseData.img} />
                   <Text fontWeight={"bold"}>{caseData.title}</Text>
                   <Box
                     className="information"
