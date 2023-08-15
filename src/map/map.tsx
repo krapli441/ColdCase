@@ -34,7 +34,7 @@ const unknownImage = {
 
 // 커스텀 오버레이 스타일
 const infoWindowStyle = {
-  display:"flex",
+  display: "flex",
   bottom: "40px", // 마커 높이에 맞게 조정
   padding: "5px",
   left: "50%", // 부모 요소의 중앙에 위치
@@ -51,7 +51,7 @@ const KakaoMap: React.FC = () => {
     lng: number;
   } | null>(null);
 
-  const [center, setCenter] = useState({ lat: 36.5, lng: 127.5 });
+  const [center, setCenter] = useState({ lat: 36.5, lng: 127.5 }); // 대한민국 중심 좌표
 
   const [loading, setLoading] = useState(true);
   const [openedMurderCaseInfoWindow, setOpenedMurderCaseInfoWindow] = useState<
@@ -96,7 +96,12 @@ const KakaoMap: React.FC = () => {
   }
 
   return (
-    <Map center={center} style={{ width: "90vw", height: "80vh" }} level={13} isPanto={true}>
+    <Map
+      center={center}
+      style={{ width: "90vw", height: "80vh" }}
+      level={13}
+      isPanto={true}
+    >
       <MapMarker position={userLocation}></MapMarker>
 
       {/* 살인사건 마커 */}

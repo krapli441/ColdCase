@@ -67,6 +67,11 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
                   }}
                   flexDirection={"column"}
                 >
+                  <FiX
+                    style={{ border: "1px solid black", borderRadius: "5px" }}
+                    onClick={() => setOpenedCaseInfoWindow(null)}
+                    cursor={"pointer"}
+                  />
                   <Text fontWeight={"bold"}>{caseData.title}</Text>
                   <Box
                     className="information"
