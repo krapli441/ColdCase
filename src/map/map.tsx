@@ -109,10 +109,15 @@ const KakaoMap: React.FC = () => {
           />
           {openedMurderCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
-              <Box style={infoWindowStyle} position={"absolute"}>
+              <Box
+                style={infoWindowStyle}
+                position={"absolute"}
+                cursor={"default"}
+              >
                 <FiX
                   style={{ border: "1px solid black", borderRadius: "5px" }}
                   onClick={() => setOpenedMurderCaseInfoWindow(null)}
+                  cursor={"pointer"}
                 />
                 <Box
                   style={{
@@ -167,10 +172,15 @@ const KakaoMap: React.FC = () => {
           />
           {openedMissingCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
-              <Box style={infoWindowStyle} position={"absolute"}>
+              <Box
+                style={infoWindowStyle}
+                position={"absolute"}
+                cursor={"default"}
+              >
                 <FiX
                   style={{ border: "1px solid black", borderRadius: "5px" }}
                   onClick={() => setOpenedMissingCaseInfoWindow(null)}
+                  cursor={"pointer"}
                 />
                 <Box
                   style={{
@@ -225,10 +235,15 @@ const KakaoMap: React.FC = () => {
           />
           {openedUnknownCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
-              <Box style={infoWindowStyle} position={"absolute"}>
+              <Box
+                style={infoWindowStyle}
+                position={"absolute"}
+                cursor={"default"}
+              >
                 <FiX
                   style={{ border: "1px solid black", borderRadius: "5px" }}
                   onClick={() => setOpenedUnknownCaseInfoWindow(null)}
+                  cursor={"pointer"}
                 />
                 <Box
                   style={{
