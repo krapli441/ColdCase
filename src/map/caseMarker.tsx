@@ -28,7 +28,10 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
   infoWindowStyle,
   setCenter,
 }) => {
-  const handleMarkerClick = (index: number, latlng: { lat: number; lng: number }) => {
+  const handleMarkerClick = (
+    index: number,
+    latlng: { lat: number; lng: number }
+  ) => {
     setCenter(latlng); // 클릭한 마커의 위치로 지도 중앙 변경
     setOpenedCaseInfoWindow(index);
   };
@@ -46,31 +49,33 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
           />
           {openedCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
-              <Box className="infoWindow"
+              <Box
+                className="infoWindow"
                 style={infoWindowStyle}
                 position={"absolute"}
                 cursor={"default"}
                 flexDirection={"row-reverse"}
               >
-                <FiX
-                  style={{ border: "1px solid black", borderRadius: "5px" }}
-                  onClick={() => setOpenedCaseInfoWindow(null)}
-                  cursor={"pointer"}
-                />
                 <Box
                   style={{
+                    display: "flex",
                     width: "max-content",
                     padding: "5px",
                     height: "100%",
                     color: "black",
+                    gap: "5px",
                   }}
+                  flexDirection={"column"}
                 >
                   <Text fontWeight={"bold"}>{caseData.title}</Text>
                   <Box
                     className="information"
                     display={"flex"}
+                    justifyContent={"center"}
                     flexDirection={"row"}
                     alignItems={"center"}
+                    border={"1px solid black"}
+                    borderRadius={"5px"}
                   >
                     <Link
                       href={caseData.link}
@@ -95,6 +100,5 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
     </React.Fragment>
   );
 };
-
 
 export default CaseMarkers;
