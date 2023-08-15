@@ -18,24 +18,28 @@ const unknownCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EA%B9%80%EA%B2%BD%EC%88%99%20%EC%9D%98%EB%AC%B8%EC%82%AC%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.13672600000004, lng: 128.4844588 },
+    img:"https://mblogthumb-phinf.pstatic.net/MjAyMjA0MjNfMjk5/MDAxNjUwNzExNTExODMw.aqb5C5UcjNgYQy77r_iXxcYtYb0dbCCL2-hD8ADK6Ykg.gkVnZB-xYsAvNZ1mt1IuEeI6Vt24ElsGwvfJ4YKW5nEg.PNG.ganghanii/20220423_195208.png?type=w800"
   },
   {
     title: "대구 일가족 변사사건",
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EA%B5%AC%20%EC%9D%BC%EA%B0%80%EC%A1%B1%20%EB%B3%80%EC%82%AC%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.810310399999985, lng: 128.6563446 },
+    img:"https://image.kmib.co.kr/online_image/2016/0925/201609251121_61120010951711_2.jpg"
   },
   {
     title: "보은 콩나물밥 독극물 사건",
     date: "",
     link: "https://namu.wiki/w/%EB%B3%B4%EC%9D%80%20%EC%BD%A9%EB%82%98%EB%AC%BC%EB%B0%A5%20%EB%8F%85%EA%B7%B9%EB%AC%BC%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.49918090000001, lng: 127.72312669999997 },
+    img:"https://mblogthumb-phinf.pstatic.net/MjAxODExMDdfMzgg/MDAxNTQxNTU1NzYwNzIy.g6mRo_3rPDQaDaCSCThM6JEM_Bl9oK08gIpK_g-wZ1sg.wN7oqD1e2w_BxZm4J3j9YuetuhHx2Xi_4LWOCmlGklcg.JPEG.pressfree/990FD73359C3B3C213.jpg?type=w800"
   },
   {
     title: "부산 고교생 매물도 변사 사건",
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%EA%B3%A0%EA%B5%90%EC%83%9D%20%EB%A7%A4%EB%AC%BC%EB%8F%84%20%EB%B3%80%EC%82%AC%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 34.639997900000026, lng: 128.5724251 },
+    img : "https://file3.instiz.net/data/file3/2020/10/21/3/0/0/3003c141da09224a471f85fcdfd32293.jpg"
   },
   {
     title: "부산항 백골 시신 사건",
@@ -61,6 +65,7 @@ const unknownCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%8B%A0%ED%98%B8%EC%88%98%20%EC%9D%98%EB%AC%B8%EC%82%AC%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 34.67545400000002, lng: 127.77202639999999 },
+    img: "https://mblogthumb-phinf.pstatic.net/MjAxNzAyMTJfOTIg/MDAxNDg2ODg3OTM2NzE3.QQt1RDpcyHoeaCK0dUPcOEmWZDfLyOazEo5LG01YLncg.4mOt3pbojWWT3IOhOSbWHepV5xUw3vPV3SAkG0-rbD4g.JPEG.ahsjdk0807/3.jpg?type=w800"
   },
   {
     title: "안산 남성 변사 사건",
@@ -157,6 +162,7 @@ const unknownCaseData = [
     date: "",
     link: "https://namu.wiki/w/%ED%95%A8%ED%8F%89%20%EA%B0%AF%EB%B0%94%EC%9C%84%20%EC%9C%A0%EA%B3%A8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.08690829999998, lng: 126.4424473 },
+    img : "https://mblogthumb-phinf.pstatic.net/MjAxNzA1MTVfOTkg/MDAxNDk0Nzg0MjU2MTE4.0xJONcdFkXIyPVnLVGeoWILu6kkparJg4VP6V4Ofdt0g.8HRs0z-K0r5YcMCdkzVZ2IO5uGXMVfgwrr2s2x-PJ4Ag.JPEG.ahsjdk0807/2.jpg?type=w800"
   },
   {
     title: "분당 여자 변사체 전소사건",
@@ -184,6 +190,7 @@ const unknownCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EA%B0%95%EB%82%A8%EA%B2%BD%EC%B0%B0%EC%84%9C%20%ED%98%95%EC%82%AC%20%EC%9D%98%EB%AC%B8%EC%82%AC%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.15970020000002, lng: 127.81422869999997 },
+    img: "https://www.sisajournal.com/news/photo/201903/182724_88331_3628.jpg"
   },
 ];
 
