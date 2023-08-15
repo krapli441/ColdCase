@@ -1,4 +1,5 @@
 ![coldcaselogo](https://github.com/krapli441/ColdCase/assets/108733795/34bef4b3-7a4c-4afa-b002-4b22c1feca4e)
+
 # Cold Case
 
 ## 미제 사건 지도
@@ -16,4 +17,5 @@
 ### 변경사항
 
 2023.08.11 : 첫 번째 배포.
+
 2023.08.15 : 마커 및 인포윈도우 변경. 마커 클릭 시 지도 위치를 변경하도록 설정.
