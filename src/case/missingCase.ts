@@ -16,6 +16,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EA%B9%80%EB%AA%85%EC%B2%A0%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.40736950000001, lng: 127.1162181 },
+    img: "https://i.namu.wiki/i/FLmNhTFCoFmERPBWHy3vWAQXhMbbPCd0MCrVIsl-sPZ-IHVaaxA1W3oWzYuRJjZks9y_F7zMSVRwUE6tVgUineKYNfPLveQ09fj3Oxp2G0beXN4LpQGr-oGDFrplHHmSI6WxxfZ5LvbcmIVfuVv99A.webp"
   },
   {
     title: "김춘자 실종 사건",
@@ -121,6 +122,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%9A%B0%EC%A0%95%EC%84%A0%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.407114599999986, lng: 127.2575348 },
+    img:"https://i.namu.wiki/i/EmuVrxqSB-syIhlRoI2etKjs-CQlxk2GfUB3-qFBIIpgYmQktJJFuMomXyIsebxJvKc4FKWD7iFpva8Tb0Zf1DSvPuL_YDmbmR1EtlE0T9f1uwQiEwlM7ox3w8ib6D5Q3cqkKG0YpQVvW6GlLed_0w.webp"
   },
   {
     title: "이방연 실종사건",
@@ -147,30 +149,35 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%A7%84%EC%B2%9C%20%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.98876009999999, lng: 127.43869429999998 },
+    img: "https://i.namu.wiki/i/2RwhD6XftVgADkFA_uzyLBgYUbeV0WGu0ePfFuGGQmBL_QgFzYyynyaOP9V5W_rgDntDVQPMFP_zBRAblIzn7d1HpRT5BkXfVyh4X1IQo2AiXGsxJ89IR1TKHfvDSaB3Epk2fPY_RIlcMYqeOJN_JQ.webp"
   },
   {
     title: "천안 여고생 실종 사건",
     date: "",
     link: "https://namu.wiki/w/%EC%B2%9C%EC%95%88%20%EC%97%AC%EA%B3%A0%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.81561719999996, lng: 127.15176929999998 },
+    img: "https://i.namu.wiki/i/7RxSoMUONfl9hORFLUcefC6-dOW1QIkDN1xicpM-H78oKetG3BAy0_E1e-1ofnljxTAxW04x7zX2Hne7hR76T8PmPvI3tEbNO9bi2DeFsnxnduxFv8_55wB2ZQsyICc7dJu6wZ_Pj27FvYVD3fAvHQ.webp"
   },
   {
     title: "청주 부녀자 실종사건",
     date: "",
     link: "https://namu.wiki/w/%EC%B2%AD%EC%A3%BC%20%EB%B6%80%EB%85%80%EC%9E%90%20%EC%8B%A4%EC%A2%85%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.61140839999997, lng: 127.32784269999999 },
+    img:"https://mblogthumb-phinf.pstatic.net/MjAxNzEyMDFfMjIg/MDAxNTEyMTA3NjM4NjUw.dstUClVg3y_rAX1owgqUKtxTLHoz0D33UauyeHR7_skg.kyut7EVQhC3TXkFuLLTehcZZlGOhzIqx8gWNY0eTFRsg.JPEG.ahsjdk0807/2.jpg?type=w800"
   },
   {
     title: "청주 여고생 실종 사건",
     date: "",
     link: "https://namu.wiki/w/%EC%B2%AD%EC%A3%BC%20%EC%97%AC%EA%B3%A0%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.61415679999999, lng: 127.50773530000001 },
+    img:"https://i.namu.wiki/i/8B2ympLmwUzMFdRCx8BBosyN4t1pTUahF8MJQCPZAqLB2Jx6ClRBPwFv7VvBFXdbiUS16Ce5EsYE_c_6QciAG6zhrLCXw3WJWEAiqE09RZjZH2PvvvkyhGjunXiQ89GZYo8ZZM3tZ74kedGZhctRfw.webp"
   },
   {
     title: "최준원 실종사건",
     date: "",
     link: "https://namu.wiki/w/%EC%B5%9C%EC%A4%80%EC%9B%90%20%EC%8B%A4%EC%A2%85%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.60222719999997, lng: 127.10648379999998 },
+    img : "https://i.namu.wiki/i/k8o2fxqy2QEvvxa9ps-5e_Iabt4n6wvJ-tpq4Liq8tg0aRn1Af4Z9cWtWmE_jksYjo5e7Zfc-qwjJVU3AKW_ig.webp"
   },
   {
     title: "춘천 목사 노부부 사망 및 실종사건",
@@ -190,6 +197,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%86%A1%ED%98%9C%ED%9D%AC%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.0537596, lng: 127.1088269 },
+    img : "https://i.namu.wiki/i/wZbppF22aYjWWVcc2boyuzBOSKhEW4dCOxqObhK5EPU6ZLE4QFpgk0qP9C5KX8IOw6bIekrcQHTLKLA1Kpzlcq_BHb6Dv3eNDTBFYCoNNqWDO9cSJlwUhVJqP0rsmmRIeVgSzYw6WyY1EVweKahXvQ.webp"
   },
   {
     title: "윤영실 실종 사건",
