@@ -50,6 +50,8 @@ const KakaoMap: React.FC = () => {
     lng: number;
   } | null>(null);
 
+  const [center, setCenter] = useState({ lat: 36.5, lng: 127.5 });
+
   const [loading, setLoading] = useState(true);
   const [openedMurderCaseInfoWindow, setOpenedMurderCaseInfoWindow] = useState<
     number | null
@@ -93,11 +95,7 @@ const KakaoMap: React.FC = () => {
   }
 
   return (
-    <Map
-      center={userLocation}
-      style={{ width: "90vw", height: "80vh" }}
-      level={13}
-    >
+    <Map center={center} style={{ width: "90vw", height: "80vh" }} level={13} isPanto={true}>
       <MapMarker position={userLocation}></MapMarker>
 
       {/* 살인사건 마커 */}
@@ -107,6 +105,7 @@ const KakaoMap: React.FC = () => {
         setOpenedCaseInfoWindow={setOpenedMurderCaseInfoWindow}
         openedCaseInfoWindow={openedMurderCaseInfoWindow}
         infoWindowStyle={infoWindowStyle}
+        setCenter={setCenter}
       />
       {/* 실종사건 마커 */}
       <CaseMarkers
@@ -115,6 +114,7 @@ const KakaoMap: React.FC = () => {
         setOpenedCaseInfoWindow={setOpenedMissingCaseInfoWindow}
         openedCaseInfoWindow={openedMissingCaseInfoWindow}
         infoWindowStyle={infoWindowStyle}
+        setCenter={setCenter}
       />
       {/* 의문사 사건 마커 */}
       <CaseMarkers
@@ -123,6 +123,7 @@ const KakaoMap: React.FC = () => {
         setOpenedCaseInfoWindow={setOpenedUnknownCaseInfoWindow}
         openedCaseInfoWindow={openedUnknownCaseInfoWindow}
         infoWindowStyle={infoWindowStyle}
+        setCenter={setCenter}
       />
     </Map>
   );

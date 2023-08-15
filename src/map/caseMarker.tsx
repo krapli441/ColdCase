@@ -17,75 +17,83 @@ interface CaseMarkersProps {
   setOpenedCaseInfoWindow: (index: number | null) => void;
   openedCaseInfoWindow: number | null;
   infoWindowStyle: React.CSSProperties;
+  setCenter: (center: { lat: number; lng: number }) => void;
 }
 
-// CaseMarkers 컴포넌트
 const CaseMarkers: React.FC<CaseMarkersProps> = ({
   cases,
   markerImage,
   setOpenedCaseInfoWindow,
   openedCaseInfoWindow,
   infoWindowStyle,
-  
-}) => (
-  <React.Fragment>
-    {cases.map((caseData, index) => (
-      <>
-        <MapMarker
-          key={index}
-          position={caseData.latlng}
-          image={markerImage}
-          clickable={true}
-          onClick={() => setOpenedCaseInfoWindow(index)}
-        />
-        {openedCaseInfoWindow === index && (
-          <CustomOverlayMap position={caseData.latlng}>
-            <Box
-              style={infoWindowStyle}
-              position={"absolute"}
-              cursor={"default"}
-            >
-              <FiX
-                style={{ border: "1px solid black", borderRadius: "5px" }}
-                onClick={() => setOpenedCaseInfoWindow(null)}
-                cursor={"pointer"}
-              />
+  setCenter,
+}) => {
+  const handleMarkerClick = (index: number, latlng: { lat: number; lng: number }) => {
+    setCenter(latlng); // 클릭한 마커의 위치로 지도 중앙 변경
+    setOpenedCaseInfoWindow(index);
+  };
+
+  return (
+    <React.Fragment>
+      {cases.map((caseData, index) => (
+        <>
+          <MapMarker
+            key={index}
+            position={caseData.latlng}
+            image={markerImage}
+            clickable={true}
+            onClick={() => handleMarkerClick(index, caseData.latlng)}
+          />
+          {openedCaseInfoWindow === index && (
+            <CustomOverlayMap position={caseData.latlng}>
               <Box
-                style={{
-                  width: "max-content",
-                  padding: "5px",
-                  height: "100%",
-                  color: "black",
-                }}
+                style={infoWindowStyle}
+                position={"absolute"}
+                cursor={"default"}
               >
-                <Text fontWeight={"bold"}>{caseData.title}</Text>
+                <FiX
+                  style={{ border: "1px solid black", borderRadius: "5px" }}
+                  onClick={() => setOpenedCaseInfoWindow(null)}
+                  cursor={"pointer"}
+                />
                 <Box
-                  className="information"
-                  display={"flex"}
-                  flexDirection={"row"}
-                  alignItems={"center"}
+                  style={{
+                    width: "max-content",
+                    padding: "5px",
+                    height: "100%",
+                    color: "black",
+                  }}
                 >
-                  <Link
-                    href={caseData.link}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      color: "red",
-                      gap: "5px",
-                    }}
-                    isExternal
+                  <Text fontWeight={"bold"}>{caseData.title}</Text>
+                  <Box
+                    className="information"
+                    display={"flex"}
+                    flexDirection={"row"}
+                    alignItems={"center"}
                   >
-                    <Text>자세히 보기</Text>
-                    <BiLinkExternal color="black" />
-                  </Link>
+                    <Link
+                      href={caseData.link}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        color: "red",
+                        gap: "5px",
+                      }}
+                      isExternal
+                    >
+                      <Text>자세히 보기</Text>
+                      <BiLinkExternal color="black" />
+                    </Link>
+                  </Box>
                 </Box>
               </Box>
-            </Box>
-          </CustomOverlayMap>
-        )}
-      </>
-    ))}
-  </React.Fragment>
-);
+            </CustomOverlayMap>
+          )}
+        </>
+      ))}
+    </React.Fragment>
+  );
+};
+
 
 export default CaseMarkers;
