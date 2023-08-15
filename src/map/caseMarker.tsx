@@ -39,7 +39,7 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
   return (
     <React.Fragment>
       {cases.map((caseData, index) => (
-        <>
+        <React.Fragment key={index}>
           <MapMarker
             key={index}
             position={caseData.latlng}
@@ -95,7 +95,7 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
               </Box>
             </CustomOverlayMap>
           )}
-        </>
+        </React.Fragment>
       ))}
     </React.Fragment>
   );
