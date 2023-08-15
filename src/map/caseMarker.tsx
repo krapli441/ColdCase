@@ -46,10 +46,11 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
           />
           {openedCaseInfoWindow === index && (
             <CustomOverlayMap position={caseData.latlng}>
-              <Box
+              <Box className="infoWindow"
                 style={infoWindowStyle}
                 position={"absolute"}
                 cursor={"default"}
+                flexDirection={"row-reverse"}
               >
                 <FiX
                   style={{ border: "1px solid black", borderRadius: "5px" }}

@@ -34,6 +34,7 @@ const unknownImage = {
 
 // 커스텀 오버레이 스타일
 const infoWindowStyle = {
+  display:"flex",
   bottom: "40px", // 마커 높이에 맞게 조정
   padding: "5px",
   left: "50%", // 부모 요소의 중앙에 위치
