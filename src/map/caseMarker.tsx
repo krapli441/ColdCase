@@ -26,6 +26,7 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
   setOpenedCaseInfoWindow,
   openedCaseInfoWindow,
   infoWindowStyle,
+  
 }) => (
   <React.Fragment>
     {cases.map((caseData, index) => (

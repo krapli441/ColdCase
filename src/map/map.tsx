@@ -16,6 +16,11 @@ import murderCase from "../case/murderCase"; // 살인사건 데이터
 import missingCase from "../case/missingCase"; // 실종사건 데이터
 import unknownCase from "../case/unknownCase"; // 의문사 사건 데이터
 
+// 미제 사건 유형을 하나로 합침
+const murder = [...murderCase];
+const missing = [...missingCase];
+const unknown = [...unknownCase];
+
 // 마커 이미지
 const murderImage = { src: "./img/kill.png", size: { width: 24, height: 35 } };
 const missingImage = {
@@ -55,11 +60,6 @@ const KakaoMap: React.FC = () => {
 
   const [openedUnknownCaseInfoWindow, setOpenedUnknownCaseInfoWindow] =
     useState<number | null>(null); // 신원미상 & 의문사 클릭에 대한 상태 관리
-
-  // 미제 사건 유형을 하나로 합침
-  const murder = [...murderCase];
-  const missing = [...missingCase];
-  const unknown = [...unknownCase];
 
   useEffect(() => {
     getCurrentPosition()
