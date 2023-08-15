@@ -79,7 +79,7 @@ const CaseMarkers: React.FC<CaseMarkersProps> = ({
                     onClick={() => setOpenedCaseInfoWindow(null)}
                     cursor={"pointer"}
                   />
-                  <Image boxSize={"150px"} width={"max-content"}  src={caseData.img} />
+                  <Image boxSize={{ base: "50px", sm: "100px", md: "150px", lg: "150px" }} width={"max-content"}  src={caseData.img} />
                   <Text fontWeight={"bold"}>{caseData.title}</Text>
                   <Box
                     className="information"
