@@ -48,7 +48,10 @@ const DisclaimerModal = () => {
               안내문
             </ModalHeader>
             <ModalCloseButton />
-            <ModalBody textAlign={"center"} fontSize={{ base: "14px", sm: "20px", md: "24px", lg: "24px" }}>
+            <ModalBody
+              textAlign={"center"}
+              fontSize={{ base: "14px", sm: "20px", md: "24px", lg: "24px" }}
+            >
               이 사이트는 대한민국에서 발생한 미제 사건들을 기록하는
               사이트입니다.
               <br />

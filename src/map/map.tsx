@@ -6,10 +6,23 @@ import getCurrentPosition from "./geolocation";
 import CaseMarkers from "./caseMarker";
 
 // 외부 라이브러리
-import { Map, MapMarker } from "react-kakao-maps-sdk";
+import { CustomOverlayMap, Map, MapMarker } from "react-kakao-maps-sdk";
 
 // Chakra UI
-import { Box, Text, Spinner } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Spinner,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
+} from "@chakra-ui/react";
 
 // 사건 데이터
 import murderCase from "../case/murderCase"; // 살인사건 데이터
@@ -64,6 +77,9 @@ const KakaoMap: React.FC = () => {
   const [openedUnknownCaseInfoWindow, setOpenedUnknownCaseInfoWindow] =
     useState<number | null>(null); // 신원미상 & 의문사 클릭에 대한 상태 관리
 
+  // const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   useEffect(() => {
     getCurrentPosition()
       .then((coords) => {
@@ -102,7 +118,39 @@ const KakaoMap: React.FC = () => {
       level={13}
       isPanto={true}
     >
-      <MapMarker position={userLocation}></MapMarker>
+      <MapMarker
+        position={userLocation}
+        clickable={true}
+        onClick={onOpen}
+      >
+        <Button onClick={onOpen}>자세히 보기</Button>
+
+      </MapMarker>
+      {isOpen && (
+        <>
+          <CustomOverlayMap position={userLocation}>
+            <Modal
+              motionPreset="none"
+              isOpen={isOpen}
+              onClose={onClose}
+              isCentered
+            >
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Modal Title</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody></ModalBody>
+
+                <ModalFooter>
+                  <Button colorScheme="blue" mr={3} onClick={onClose}>
+                    Close
+                  </Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+          </CustomOverlayMap>
+        </>
+      )}
 
       {/* 살인사건 마커 */}
       <CaseMarkers
