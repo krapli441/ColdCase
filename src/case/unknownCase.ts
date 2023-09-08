@@ -116,7 +116,7 @@ const unknownCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%9A%B8%EC%A7%84%20%EB%B0%B1%EA%B3%A8%20%EC%9C%A0%EA%B8%B0%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.72984730000003, lng: 129.4367714 },
-    img: "https://i.namu.wiki/i/nYnXruuajjrGbV-YWn1q8cRJezCWUNWHoH3D2YafgZgcSc21rFj60mQSqJf8tVc2bNSpoeGUIWKqmys_u1Zeh5V4yhdFdBv6yxKTZbkGFp-jnyigL24ZDUg-zlNzhg1MyqayZh-V6uz47htuzhC-Qw.webp",
+    img: "https://i.namu.wiki/i/7eSl_PscVfM81_tSneY8I8cagXA2E-UvwLaQZDmu7gKAPrQN7U3qQyePXYWVf01CTuFdsLjm35TwONhOCqWbag.webp",
   },
   {
     title: "인제대교 사체 유기 사건",
