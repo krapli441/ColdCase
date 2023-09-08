@@ -12,9 +12,9 @@ import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { Box, Text, Spinner } from "@chakra-ui/react";
 
 // 사건 데이터
-import murderData from "../case/murderCase"; // 살인사건 데이터
-import missingData from "../case/missingCase"; // 실종사건 데이터
-import unknownData from "../case/unknownCase"; // 의문사 사건 데이터
+import murderData from "../case/murderdata"; // 살인사건 데이터
+import missingData from "../case/missingdata"; // 실종사건 데이터
+import unknownData from "../case/unknowndata"; // 의문사 사건 데이터
 
 // 미제 사건 유형을 하나로 합침
 const murder = [...murderData];
