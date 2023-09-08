@@ -46,14 +46,14 @@ const unknownCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%ED%95%AD%20%EB%B0%B1%EA%B3%A8%20%EC%8B%9C%EC%8B%A0%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.11738810000001, lng: 129.0487465 },
-    img:"https://img.etoday.co.kr/pto_db/2018/08/20180809092600_1238314_587_324.JPG"
+    img: "https://img.etoday.co.kr/pto_db/2018/08/20180809092600_1238314_587_324.JPG",
   },
   {
     title: "부산 해양대학교 맨홀 변사 사건",
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%ED%95%B4%EC%96%91%EB%8C%80%ED%95%99%EA%B5%90%20%EB%A7%A8%ED%99%80%20%EB%B3%80%EC%82%AC%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.0762886, lng: 129.08897509999997 },
-    img:"https://blog.kakaocdn.net/dn/U2M2y/btrguodQpkI/scYbBvqHgKPKPTGuuVlmT0/img.png"
+    img: "https://blog.kakaocdn.net/dn/U2M2y/btrguodQpkI/scYbBvqHgKPKPTGuuVlmT0/img.png",
   },
   {
     title: "부평 콘크리트 암매장 사건",
@@ -116,7 +116,7 @@ const unknownCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%9A%B8%EC%A7%84%20%EB%B0%B1%EA%B3%A8%20%EC%9C%A0%EA%B8%B0%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.72984730000003, lng: 129.4367714 },
-    img: "https://i.namu.wiki/i/w0NtjQhwh5nM8dsRsge7yZXwoygF-f6rIe2QChC0HPE_zqwcuxT955-prRWcEXCD_Kbd7HwXLnyFrgcdJRVtPlv2rbeCaQvCrlkUOvzib8b7XeasqhMhWaQChczopodOBowb9qeCoL4zTqKHDjt6Tg.webp",
+    img: "https://i.namu.wiki/i/nYnXruuajjrGbV-YWn1q8cRJezCWUNWHoH3D2YafgZgcSc21rFj60mQSqJf8tVc2bNSpoeGUIWKqmys_u1Zeh5V4yhdFdBv6yxKTZbkGFp-jnyigL24ZDUg-zlNzhg1MyqayZh-V6uz47htuzhC-Qw.webp",
   },
   {
     title: "인제대교 사체 유기 사건",
