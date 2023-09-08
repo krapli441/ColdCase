@@ -12,14 +12,14 @@ import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { Box, Text, Spinner } from "@chakra-ui/react";
 
 // 사건 데이터
-import murderCase from "../case/murderCase"; // 살인사건 데이터
-import missingCase from "../case/missingCase"; // 실종사건 데이터
-import unknownCase from "../case/unknownCase"; // 의문사 사건 데이터
+import murderCaseData from "../case/murderCase"; // 살인사건 데이터
+import missingCaseData from "../case/missingCase"; // 실종사건 데이터
+import unknownCaseData from "../case/unknownCase"; // 의문사 사건 데이터
 
 // 미제 사건 유형을 하나로 합침
-const murder = [...murderCase];
-const missing = [...missingCase];
-const unknown = [...unknownCase];
+const murder = [...murderCaseData];
+const missing = [...missingCaseData];
+const unknown = [...unknownCaseData];
 
 // 마커 이미지
 const murderImage = { src: "./img/kill.png", size: { width: 24, height: 35 } };
