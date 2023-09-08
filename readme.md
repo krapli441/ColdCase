@@ -1,6 +1,7 @@
-![coldcaselogo](https://github.com/krapli441/ColdCase/assets/108733795/34bef4b3-7a4c-4afa-b002-4b22c1feca4e)
+![coldcaselogo](https://github.com/krapli441/ColdCase/assets/108733795/00691306-248f-41bf-9639-173d70a9eb4a)
 
 # Cold Case
+
 
 ## 미제 사건 지도
 
