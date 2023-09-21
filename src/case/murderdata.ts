@@ -66,7 +66,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EC%A0%84%20%EA%B0%88%EB%A7%88%EB%8F%99%20%EB%B9%8C%EB%9D%BC%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.347403400000005, lng: 127.36949589999998 },
-    img: "https://i.namu.wiki/i/FWPS9AMhN81_txhhiAexLq2VE1UB_GsiHwP3ghGcSD-atuWvex-n_Vmgji0YMD9p-wonBLaGctG96N85tVQKxo-4Fon9_MUznP1zSb1DHgV14Vzbe8gbdfQ-9oL-vQh4Na2Mx7haoUa4eaS0Wtld3Q.webp",
+    img: "https://i.namu.wiki/i/760Nx0lDtiqE-iFF4KVdh3ZmQlJLoGpU9t6cfT7tf5TAeukuXA7hHM7QTGZAEHcbyizlQqP19E0VeNETENnBDjAydkka0iZ6Zmg-A03I7-w9OjhZJtVGxfYdoL5ahinmSSp4bLVQbNs5v6ls-84M6w.webp",
   },
   {
     title: "대전 갈마동 월평산 여중생 살인사건",
@@ -80,7 +80,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EC%A0%84%20%EC%86%A1%EC%B4%8C%EB%8F%99%20%ED%83%9D%EC%8B%9C%EA%B8%B0%EC%82%AC%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.36269409999999, lng: 127.44199470000001 },
-    img: "https://i.namu.wiki/i/CJlmOHKRGnE7-fkR8egDhdiqD83uXxykLmhSv2cOqwn-y2GVlogbiCp5WveWyNohCH-F_G9hWfJFDN7HMJOdflruMjmLeIufbHAtENaHBhETDaXYYCBJjWHgK_8mtMEaweM7zf6DNRsxwlLFGtxAiQ.webp",
+    img: "https://i.namu.wiki/i/hOJKRxw-0aVK78pfkV-5Yh8RpT9nZpYoifOxvN-z2mHyPsqLif9lI8_W1zR8hwRiqh8EKREB10y6kI6M2Riz8Oemmw3uYu3wzzIEySpgf5OmDXrtjvmsrWG08T26liRklfoMlMgr2jNany7L9vzy-w.webp",
   },
   {
     title: "대전 자양동 여교사 살인사건",
@@ -114,7 +114,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%A7%8C%EB%B4%89%EC%B2%9C%20%EC%98%88%EB%B9%84%EA%B0%84%ED%98%B8%EC%82%AC%20%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 34.911684599999994, lng: 126.7723926 },
-    img: "https://i.namu.wiki/i/a3eHBuwAL-HtIvINZgbdMt4QlQ2mu71PIDk4JykL8wnKE18n4uTRVxOVfmSz0CsVhteY97I1xguSnRbq5Rc82MrymQtJww7x4vyu47OEOCbQSx5cCUkRFSsL5AHcy51rfLcSSpxdKV2Hg91XYdXrdQ.webp",
+    img: "https://i.namu.wiki/i/3NCZCCya7vqZQVa_LWQ0N20PCzXNJjL5FrxqmBkPmjlHVJ2l1IN_ZL0p5aHGog9sjVPHn6l073Ppz9H6KXejTWZGHQO5tcgl1ZhK_8ShAUyuh7jMtuPImKpfEoiYS_0m5cLu0E0879yIBoWzPX1v9A.webp",
   },
   {
     title: "모텔 정화조 살인사건",
@@ -219,7 +219,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%84%9C%EC%B2%9C%20%EC%B9%B4%EC%84%BC%ED%84%B0%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.074603899999985, lng: 126.6968565 },
-    img: "https://i.namu.wiki/i/8aZ55RKP_ydPaeatj7R795Cn39CNS0ijdiToSwbHyunT_WbzWqHVuiP8CzdlKNU703neJn89uVK5ofBe8YICaA_2qmyZ-cdZxNwSWckbsVDW5QrseeQTsDh-a2fgzO6c6zaktM4UajCUFFUzBM485A.webp",
+    img: "https://i.namu.wiki/i/9Gp-f-65xyv1V3tnZ6zAv1CluH8QGjUu1qqE0eOtV7n1a1FCEeW24K1M0PicuQtNGXbWOeUad4ptlv1E6eEZ69iwqfJYWAYdHWO-ZP6qzySiEzmyb0QQKckMEc7_ss4_87T6mdmDivC59p0DOsRLyw.webp",
   },
   {
     title: "센트럴 시티 살인사건",
@@ -422,7 +422,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EA%B5%AC%20%EC%97%AC%EB%8C%80%EC%83%9D%20%EC%82%AC%EB%A7%9D%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.856278399999965, lng: 128.48859900000002 },
-    img: "https://i.namu.wiki/i/XFP06E3Y0TTuUeiBU510I93GHODfxOWI8e7FWekSg6H3ZQgn3ziLV7FXlGb7ymPHsyxlRWT0Kham5Zgnd9fGpWsD9luGG4cdcQrzveqAzx8CC-EIVLc7aN1Id7t1Gj6QQ5JDfiqce0EZGzVKPH_lkg.gif",
+    img: "https://i.namu.wiki/i/ema2HXlWxC-2gOov6for3wdRNT-ku9_ThhEHZ5W686AooO6tBhUtc5qhIJG9dFFlClbZ1i50J200kpAfKeVq5wF-m450yXtMvQcpTVR9PFr7tCYV7D-iQK3p6Z22D7LWo5ZfO9gj4Dy39itfUemJWw.gif",
   },
   {
     title: "대구 청테이프 살인사건",
@@ -443,7 +443,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EC%B2%9C%20%EC%98%81%EC%9C%A0%EC%95%84%20%EC%97%B0%EC%87%84%EC%9C%A0%EA%B4%B4%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.33316289999999, lng: 126.61294409999998 },
-    img: "https://i.namu.wiki/i/ls4bNqKzY2KVYDXVTF7kj6eieLtYBiSOHKaUHvRtSaMVlcOaQ9ZOWSlDHpxRuYQ5FT9nXmemYFO15Sqap9kl57pFWhJgdEU8KckXSgz1S07KN8laBO8NTHo88ay5UpFYtqXMtG9-XMuzoQCknqBDXQ.webp",
+    img: "https://i.namu.wiki/i/WKpkzm3lDAhbyPMr2-b6dbAevzORX57s8oenA8sCfLD-TlG2T87Ymdh5-zaL-QygoaQ3LAp6WFRX4JrtBCnG81QGba2IeGX4BmVdfqYYzn4uSf-wvqIHmpSGbtVGd3LSq8KvtW6I-HnxiPF9iw_cXA.jpg",
   },
   {
     title: "부산 괘법동 태양다방 종업원 살인사건",
