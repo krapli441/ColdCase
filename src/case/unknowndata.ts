@@ -195,6 +195,13 @@ const unknownCaseData = [
     latlng: { lat: 36.15970020000002, lng: 127.81422869999997 },
     img: "https://www.sisajournal.com/news/photo/201903/182724_88331_3628.jpg",
   },
+  {
+    title: "문경 십자가 시신 사건",
+    date: "",
+    link: "https://namu.wiki/w/%EB%AC%B8%EA%B2%BD%20%EC%8B%AD%EC%9E%90%EA%B0%80%20%EC%8B%9C%EC%8B%A0%20%EC%82%AC%EA%B1%B4",
+    latlng: { lat: 36.651080700000016, lng: 127.97337140000005 },
+    img: "https://i.namu.wiki/i/DLHfuDmvnJpLvg0KJiTVzxBhqprOQbB-bcZi5IXpbQfEFvFAO6KsQoQQH2FiQJTq5W4d6cYJMb8B2g0H39cA0dbRRp7rj1tcs81_vPIkKdM14ld4PWWrIZ61gogwJZCyXjGQRkkC81cpEH2iXpYhkQ.webp",
+  },
 ];
 
 export default unknownCaseData;

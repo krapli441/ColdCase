@@ -529,6 +529,13 @@ const murderCaseData = [
     latlng: { lat: 37.5406979, lng: 126.84727220000003 },
     img: "https://pds.joongang.co.kr/news/FbMetaImage/202208/9c824897-040b-4273-ae9f-bbd29b4e0e7c.png",
   },
+  {
+    title: "시흥 딸 살인사건",
+    date: "",
+    link: "https://namu.wiki/w/%EC%8B%9C%ED%9D%A5%20%EB%94%B8%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
+    latlng: { lat: 37.5406979, lng: 126.84727220000003 },
+    img: "https://cdn.joongboo.com/news/photo/201608/1098077_1008613_4823.jpg",
+  },
 ];
 
 export default murderCaseData;
