@@ -32,7 +32,7 @@ const murderCaseData = [
     date: "2006년 5월 8일",
     link: "https://namu.wiki/w/%EA%B9%80%ED%8F%AC%20%EA%B0%80%EC%A0%95%EC%A3%BC%EB%B6%80%20%ED%94%BC%EC%82%B4%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.60620830000001, lng: 126.72235489999998 },
-    img: "https://i.namu.wiki/i/pc99zoj9jbhCkp8laUpS5IQp_GSpgDeeXxHktILYfT659GVjBUGp7bIj_Nal6OMdRrF_KZqcxpGAQnanulgXf0KWDhnD3gHXWE_CM-UFyp2KJDH6tA0WaTbxvRhOhpX5FGskUqTfmjr11XBMLbaQjg.webp",
+    img: "https://i.namu.wiki/i/SVMmGYRIgkaPMRwIVwBJH5s4P9e3PXGr0DXYCTij9ZTY3JkFFyo8wJ901vo2ux5SGcZvbqP7XcVjzQZY0IKWBEmb5K9x3zsC5evvg4DCK77tdL_OwLUH4q191D_IMfnKTSDIhliLBT7yox9W4TOTJA.webp",
   },
   {
     title: "남양주 아파트 밀실 살인사건",
@@ -66,7 +66,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EC%A0%84%20%EA%B0%88%EB%A7%88%EB%8F%99%20%EB%B9%8C%EB%9D%BC%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.347403400000005, lng: 127.36949589999998 },
-    img: "https://i.namu.wiki/i/760Nx0lDtiqE-iFF4KVdh3ZmQlJLoGpU9t6cfT7tf5TAeukuXA7hHM7QTGZAEHcbyizlQqP19E0VeNETENnBDjAydkka0iZ6Zmg-A03I7-w9OjhZJtVGxfYdoL5ahinmSSp4bLVQbNs5v6ls-84M6w.webp",
+    img: "https://i.namu.wiki/i/dq8O_P8iGbssEZ7wNOLliiEQPsn8MxIXxp1Zw0Y9SDYGaw38yHDS_OrROEdXqxEksLEiBNadt08c0BpUKmFnXEzNqGFYAS3rMMo3lFsQSE4Hd2zN-LKexqr_gyv6EFF9cKlIFCjamR05vT0dFMpbEw.webp",
   },
   {
     title: "대전 갈마동 월평산 여중생 살인사건",
@@ -80,7 +80,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EC%A0%84%20%EC%86%A1%EC%B4%8C%EB%8F%99%20%ED%83%9D%EC%8B%9C%EA%B8%B0%EC%82%AC%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.36269409999999, lng: 127.44199470000001 },
-    img: "https://i.namu.wiki/i/hOJKRxw-0aVK78pfkV-5Yh8RpT9nZpYoifOxvN-z2mHyPsqLif9lI8_W1zR8hwRiqh8EKREB10y6kI6M2Riz8Oemmw3uYu3wzzIEySpgf5OmDXrtjvmsrWG08T26liRklfoMlMgr2jNany7L9vzy-w.webp",
+    img: "https://i.namu.wiki/i/M3awHO-U2nw4XxN1BKwX4oGQ12t1_euiJQ8Uc9Ui33DC7VPrPGGJnvf5lR0_fAEsuTmwnYhV66m1Xz2D4XN13autotKLu0aWJoDIstC3yI4eAG9gKOCDtAq4PyOPOVSk14u-KUebwpW-eaiKD-j_YA.webp",
   },
   {
     title: "대전 자양동 여교사 살인사건",
@@ -107,14 +107,14 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8F%99%ED%95%B4%20%ED%95%99%EC%8A%B5%EC%A7%80%20%EC%97%AC%EA%B5%90%EC%82%AC%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.581072600000006, lng: 129.08273730000002 },
-    img: "https://i.namu.wiki/i/U5fXDOn3_3Y8gyzbOIvA8QupKVDBqsM3V70iDYrZAn5TPz3scxnFb8cIpFDtsaVGZAozVpGoY6kSuyAL7bGoLzsqua3eSbUhmqMUdLnZM_aBmoVtOInIxb8-EfNKG7SLq_XCD3_HYg-OzMkEQ3_SfQ.webp",
+    img: "https://i.namu.wiki/i/_RL08IIAEHzAPN8Cxqpydg4YOdRT8I8QIcQGWG41oezVPSujLp2wuy2yL30ANsj7QsBdsybPJ19bkmyw2d8LOtJN0WFhpNmL3Z-PKT3l8oHSYmu9253tfsmT2cvcwAvAijepePWYLxvMPmCK9Y7zcw.webp",
   },
   {
     title: "만봉천 예비간호사 살인사건",
     date: "",
     link: "https://namu.wiki/w/%EB%A7%8C%EB%B4%89%EC%B2%9C%20%EC%98%88%EB%B9%84%EA%B0%84%ED%98%B8%EC%82%AC%20%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 34.911684599999994, lng: 126.7723926 },
-    img: "https://i.namu.wiki/i/3NCZCCya7vqZQVa_LWQ0N20PCzXNJjL5FrxqmBkPmjlHVJ2l1IN_ZL0p5aHGog9sjVPHn6l073Ppz9H6KXejTWZGHQO5tcgl1ZhK_8ShAUyuh7jMtuPImKpfEoiYS_0m5cLu0E0879yIBoWzPX1v9A.webp",
+    img: "https://i.namu.wiki/i/v-uykXH6GQ8bLg1AmP_Az9wxEmuMkZr6YnbWQ41C0OmvRJ-BwxEfz3PiUQjo3hcgtEbyWIIQTHKNUemcck-NSQmC16ZkeVxWoV9pcV50lgJ93NLOxYGC1r1QAw2GWU72CIXX_1lSr-sULZ3xNQRdKQ.webp",
   },
   {
     title: "모텔 정화조 살인사건",
@@ -142,14 +142,14 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%B4%89%EC%B2%9C%EB%8F%99%20%EC%A3%BC%ED%83%9D%EA%B0%80%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.47796710000001, lng: 126.95348829999999 },
-    img: "https://i.namu.wiki/i/JfgkmkbwuwDtatqpDFkynwV9kNbDQm1DkAG_t95Lgc5RIPJF-Fnj5QeeEhHMDh7F79EII9c7uEk-yHNIGXlNloc7P8Rw2Lh-kHkoXX24yV4mAL1Fnu-iQTh0sXQ-rFR72bg_7PjfR-wBjGR3NdPDcA.webp",
+    img: "https://i.namu.wiki/i/Z642glsGFnITCZixU1H4fZI0sJfQYhdGILy-zqDx3uhQl-a8M28sgRKlv_bOqi4Lq7MqjSvy1hmGXAnAfL64lns4FrfkgfINqqzka46jtYL8LAvkyRYlXMDvosIeS2sf4i_8Zcl8pB7vQ1HcWm51Lw.webp",
   },
   {
     title: "부산 대교동 여관 살인사건",
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%EB%8C%80%EA%B5%90%EB%8F%99%20%EC%97%AC%EA%B4%80%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.09092800000001, lng: 129.04145570000003 },
-    img: "https://i.namu.wiki/i/Kb2CVsOT1JkGYiuAZIqHB8EvVWkLwz_ksXe9AkNK__c88Cg-NgoviX6EFLvQkVaa0zFWROsdw_Y4YZvyMOoZM13J-3TOw7L7F777RpIqjJKE1BuAHAErdrZ0VcYX4dgyVsZv8AXAjfBMpraLuYV0kw.webp",
+    img: "https://i.namu.wiki/i/uuVLMCLRt6FaZ6mIoz8iSQv5gPNBOUYjaLQtYnaAokTSXwzGC5NumosBtZD4lKILSD4Ly5XuYAC-CuQpOChO2UBJl5MIgH_2hlSPiB0bcj7dv_x7QOhjcbmMxQ0G6Sy1TOJpeVqUVR8G53qGm76mQQ.webp",
   },
   {
     title: "부산 배산 여대생 살인사건",
@@ -163,7 +163,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%EB%B6%80%EC%A0%84%EB%8F%99%20%EB%AA%A8%ED%85%94%20%EC%97%AC%EC%A3%BC%EC%9D%B8%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.15472400000003, lng: 129.0571687 },
-    img: "https://i.namu.wiki/i/hehCOwids9Zypfk04zppDig54CMd7ORWNsx2mpliKeRYdzUY68JKSKfX-r19E1vy8-aNFK3mFE0qGGoCTJdN6KYsMCyWoU_lgK5AOksdk7eFTP-bPdjOkwEue97jmF_YmCKfUNOdai82R2eNAdvuCw.webp",
+    img: "https://i.namu.wiki/i/-1GLHbqfH2wIMxZf8J8iiArshwbeFqyBnyojw-GYz6DpOjxVrdEPBnXpCqw53PV84D2YUyaVv4i8GFAVKJH6cEIU7beJAiMjLeECKf4os9ADuZOftBK3iKsbj07u-Fy2LElvz9_sfGH65K2rgYg6tw.webp",
   },
   {
     title: "부산 시약산 살인사건",
@@ -219,14 +219,14 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%84%9C%EC%B2%9C%20%EC%B9%B4%EC%84%BC%ED%84%B0%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.074603899999985, lng: 126.6968565 },
-    img: "https://i.namu.wiki/i/9Gp-f-65xyv1V3tnZ6zAv1CluH8QGjUu1qqE0eOtV7n1a1FCEeW24K1M0PicuQtNGXbWOeUad4ptlv1E6eEZ69iwqfJYWAYdHWO-ZP6qzySiEzmyb0QQKckMEc7_ss4_87T6mdmDivC59p0DOsRLyw.webp",
+    img: "https://i.namu.wiki/i/8oPn5Vl4JgqnV-o7b88GCXSUD6AcmXodanj31CYc8bDWd-TPM7SUKFQtONlrdb8yUuUXxeMr6lDQ6U4yUUQdsmC0fo1l3rGAsgq9Rh9NuYLB0ZWGOf35bGYqPL749-ccZhwy33N1zgq5h4BJhN40Gg.webp",
   },
   {
     title: "센트럴 시티 살인사건",
     date: "",
     link: "https://namu.wiki/w/%EC%84%BC%ED%8A%B8%EB%9F%B4%20%EC%8B%9C%ED%8B%B0%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.504914199999995, lng: 127.00491509999999 },
-    img: "https://i.namu.wiki/i/yemm5WnGkml-Gkfkf769mDQmD_64V15vYpLgCdDLVLixgjCcBBG93oDFBkAi7CxtInaldYFTuRWdiflWGCvYRr-6rEsXj4JS6JLEBOzliXswRqvDZLbdSOFjXyb2-MiqqKWeUl9XB01_92v_J-SZoQ.webp",
+    img: "https://i.namu.wiki/i/MenSON7-y4hL1XcVhlhrlPMyqi5rIDUmGf_h6YVtsvCNkvS5QqUzml1-BldE5RVdIeb85aoEtTgzHZ4TLQFkYicOBknAf59qU-crDkrA2wJdlXJ0-85hQMdNAznmP5x74uNSmVyqlPNKDPcK07Ktqg.webp",
   },
   {
     title: "속초시 콘도 살인 암매장사건",
@@ -289,7 +289,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%98%81%EB%93%B1%ED%8F%AC%20%EB%85%B8%EB%93%A4%EA%B8%B8%20%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.53127630000001, lng: 126.9088084 },
-    img: "https://i.namu.wiki/i/viixfUEJ4Byhow75UnPC6z8ilRzf64NxUyUQpGUfBenstEHONUUErMTfj--7l4D7YyJxVG_sz-J5gpNrXgbOHnlIZdyJ1W9Md9dDaDh_O8Tj_tufw6yWD2HNhoyymUpznJTedeLozShdixItih8XKA.webp",
+    img: "https://i.namu.wiki/i/Zf7iSs4qbErOygjclR551CPBabKw6KzknFqEjNQu5hDds-WBIazYzKy70zsi1YlvQVjTJ25vSgpw3bpYOLjPSbSA_XznMlRvN0zAcS9vV6CjHLEXgRUpu0nkQxd-6yYUDXJhe8cOwKJ4YcZqiEzOVg.webp",
   },
   {
     title: "영주 택시기사 살인사건",
@@ -317,7 +317,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%9A%B8%EC%82%B0%20%EB%B6%80%EA%B3%A1%EB%8F%99%20%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.49798850000003, lng: 129.3347569 },
-    img: "https://i.namu.wiki/i/YBydXAxVRNDhNfeh8tiKZEXFuWnEW2T2WJNHU-cASyHoxIogxvkGBDrxsyKKr_toJcSizjmCsK2uTp3X1FhuvKYxvfbgADfrYbBeEFef9b5z-QO1Q8SirQ3ovIrjG476KAsTZfYxQxVmT1ZxqzpAzA.webp",
+    img: "https://i.namu.wiki/i/34P8oqTWelmYCEaojXaKh42ZJScOtWIzBJ8QkiEhoODO7_AWzRLHKOVokDjW00Hn4F7KyUGOQsLJN3sbcpWHvYlRDEs0Rtd_ZkdJ5aNiNztC_S-HHnDbBeWtFJLlv1wjO0rmQcd7EVWNicPvN7wXVA.webp",
   },
   {
     title: "울산 초등생 방화 살인 사건",
@@ -338,7 +338,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%9D%B8%EC%A0%9C%20%EA%B4%91%EC%B9%98%EB%A0%B9%20%ED%86%A0%EB%A7%89%20%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 38.1317758, lng: 128.1476562 },
-    img: "https://i.namu.wiki/i/PAwawXwIW0X3bWYgchPmelbuQlw_IsEuZghItt8Y_8AUZLjD4s7Ki3KeqCZwPhqjkriSLIv4WrJNl8Z5ACWK81mRSPLcDryHuymg9djkAm1Gvwb_znzSYyjUHZfyBT25vLjZqX732OtIfULccBejQw.webp",
+    img: "https://i.namu.wiki/i/oXp-9Is4wKbYzdrqTzJX9fcA9e6T04P6tBNzncNxtPmS-sunl5lJTT85vA4-GeunwKXiQoSgd6VQhwJ3WdUYhgGtqq2bjqME8eQldEvcVlXXXD_weh5MQq1ZE_I88p1m2Yg5_asVo81cz-25UiI0iQ.webp",
   },
   {
     title: "인천 계양구 놀이터 살인 사건",
@@ -450,7 +450,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%EA%B4%98%EB%B2%95%EB%8F%99%20%ED%83%9C%EC%96%91%EB%8B%A4%EB%B0%A9%20%EC%A2%85%EC%97%85%EC%9B%90%20%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.16490040000003, lng: 128.98572200000004 },
-    img: "https://i.namu.wiki/i/ZuOxujsXcyBa22JqAqBymu6-uOCZMlp1ZhbKaOK9VRIQUfLs-kDuEkM-_dj8VGQokB4R0WeyAGaMhOdaHyZK31XLaAwPKlYzme6n3UMvyVEur_ZvWT67180BZlbg5WXfZPzijD9JEBbFT1EGWldnZw.webp",
+    img: "https://i.namu.wiki/i/uv25WArpiNaf4Ppv_HvknZYauHjHIQ5wA2nBS-zZsqWPzR93qU7f7TA0JJ6meYmn5xWs5kvdkHIbXfehqumnuP3-jQUpQCgLeUe7BAqhFCrP-yx0a5eLNOoEKin0ek7Wj2kGC5eMjmCc7sjCsRDxig.webp",
   },
   {
     title: "부산 미용사 살인사건",
@@ -464,7 +464,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%EC%96%B4%EB%A6%B0%EC%9D%B4%20%EC%97%B0%EC%87%84%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.07613729999999, lng: 128.96970880000003 },
-    img: "https://i.namu.wiki/i/QuB2deyGrefrZGaWT7cSpQRUfIr6xJI__pjQwToTyjvWE68HS4Dp6fSbe7Ebem7Q-tW6XdH_QqvHDBOCOOcqdZh6P3HyU-6RxiuoWGCLEjDzzxkP8G8R_sFeMhrG89lYopD_2OBq91e4IDS3uGaXIw.webp",
+    img: "https://i.namu.wiki/i/arh_1NsO4gY6huGsdvjjDswjcfyAqWs6-x-TXkkhsWJ2q3V2jljVWEJzQmPst-uFw0X-lbQEAXEzWMeI2vtgN9n557mCYc4Z7HGqaABKQHLBur74iBeN1bumb3QndljNMMNTZVJQE77fHogCoZBVbQ.webp",
   },
   {
     title: "사바이 단란주점 살인사건",
@@ -513,7 +513,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%B9%98%EA%B3%BC%EC%9D%98%EC%82%AC%20%EB%AA%A8%EB%85%80%EC%82%B4%EC%9D%B8%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.61915940000003, lng: 126.93556689999998 },
-    img: "https://i.namu.wiki/i/72qAoK4439uYcagjZ9PfpL9zwiKnDC4DN4MSHgSOjRyCcCXNrRC_RbUPeNvY7KpXRiE8eakP_ix2LFK2vOeUcuYxxIpeObhO_ukbGxEoFnjMKIYbBmccHjMGwGY9ZRC9M2KxhiPvaGqOuZOAhdvyvw.webp",
+    img: "https://i.namu.wiki/i/l2a7-L5Jy6AHJGYpXfiM22LaBsGqgkMTwtGwmU6QIQ7s7YTc5ZKKQ5-TQFWq8Ek-BSU7dO-NTeIZI9W7o9eaGfFqfD0ZvFYaYSn-j__LER8DD5HgFmNo2NC_owHgZrEqd8Aae33GM6QJWmgjQe_xsw.webp",
   },
   {
     title: "아산 갱티고개 살인사건",
