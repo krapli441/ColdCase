@@ -25,7 +25,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EA%B9%80%EC%B6%98%EC%9E%90%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.22465609999998, lng: 128.88770640000004 },
-    img: "https://i.namu.wiki/i/ZxS2W05SVDyaTvk5aoJAL0RAAUM5QVJWTlbBPSXRbX2Qwt0kVl12uXjXccC0HE3rEP7TaxkbNbsJYVDpH9FqhmY1qZRYwLt8H4jLkg3BxhEcuSb5GXBE8RygpDtFuycHTlb0TJ_H9XUWMPoaxfjtuw.webp",
+    img: "https://i.namu.wiki/i/5-pVYh7AvepvaPwCladj8BqlM14VrrfvO41Dz_Kqs9QqwmYl0e1uMHOsuk3lQN5uQeETW8FUKQ2l_Wldx1YpCwWoj1jmcCDvNHv6zPjb-iuUBoaKkzmMH6ocqXIryEV3Cgv2MIPt1aVK3yuuUMhMAQ.webp",
   },
   {
     title: "김해 부산 부녀자 연쇄실종 사건",
@@ -67,7 +67,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%AA%A8%EC%98%81%EA%B4%91%20%EA%B5%B0%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.167835600000004, lng: 129.17907670000002 },
-    img: "https://i.namu.wiki/i/LrhTi434TIQWSLjmeSvofqeeUojA0j-x1dRTg0EhuyV6Ypy6U9XjBV58_9wU2sN-yPCWFrdV9yDcVN9XIQCRVTN11igYS05qu3BBWknTVhfgNlZTDAxq6WIvk71r7C2SaKDPPD3tXqIHwXdtyK-m2Q.webp",
+    img: "https://i.namu.wiki/i/GwuQ6KY8f_sDACmavEYbMD1J8kldIRUpemAPQ_nUaNG8jFrQoAG9oY6bUXVkk9xeVn8lgBOukvLuhclTNbc2p5aQ-_1OBpHL0cKpDAL3ajC5_Us_mM79xmPC0RzH_LYgG7mcyd9KGRqLD7u-rRO2Og.webp",
   },
   {
     title: "부산 신혼부부 실종 사건",
@@ -81,7 +81,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%EC%97%84%EA%B6%81%EB%8F%99%20%EC%B4%88%EB%93%B1%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.1273277, lng: 128.97103579999998 },
-    img: "https://i.namu.wiki/i/Kr10OK9F3ZsRdJT_B-OW7z3AfC1v6I3vRttAXKKR3pMLOG8Lk4x9zy7fF0GWzz1GAuwSRSBHEbF-x1t0hzkopXe9SSXKeBaoB_tV65MIdhsM2FpKc0MUgQALigMyYFxklPOXS3iIUxQIlt5a-28xdg.webp",
+    img: "https://i.namu.wiki/i/A5fXndc_kB13Jui5X8_TDEFIj-WljOSGRYXW2s41w6OJuUR4S7HkR5O4QIkA4Mwku0cVWT9hir-PA4uC-hU2ayJjVDQymXL9FAvauzPwGyDFxFBvJpy4ewgFYnpccx2NMFPlP4guJ3pQMPE-pr4fAA.webp",
   },
   {
     title: "부산 여대생 실종사건",
@@ -95,7 +95,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%B6%80%EC%82%B0%20%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EC%82%AC%EC%9E%A5%EB%B6%80%EB%B6%80%20%EC%8B%A4%EC%A2%85%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.09742059999999, lng: 129.03036309999996 },
-    img: "https://i.namu.wiki/i/G0j-CDmTaUmAn6kmwRKtONxf_viVzJEWjux50Hwj9hmHi9m84LxvOOw3RXiCpJSm0S3NfnbyI-VuXmiQ-HzCbn1DAZDxFW-RIVunLGLZFAd70RufIxPKr3vhu5BGiqXJg-FdhJl89hjbLVmuSNAyNg.webp",
+    img: "https://i.namu.wiki/i/iH-pvdaQ0TMPZJLJ_7ZMpB_PpZAUV9n5oYBq29LvdYlFKY_cG2K0R3c1URa8VfEQDcCnEshSUobHyo3KT00IzQChmvt17ovSQfkqx5mMYLmPZMOz0SFM1he0fc5R5Vl_dTshR3OcDjAa6YIwSwF-tw.webp",
   },
   {
     title: "부평구 네모녀 연쇄 실종사건",
@@ -130,14 +130,14 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%96%91%EC%82%B0%20%EC%97%AC%ED%95%99%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.410134000000006, lng: 129.1445966 },
-    img: "https://i.namu.wiki/i/xfR6lBvj0ScWK6bpe8_9jsKLRwo5cetJlxJjtxZb3aPm8GqWcHFchIF8rE1LWUtKGPwz6zpOKZzBg092v29i2P80PomTMgDxJ5dw1L-cH0tCQ_OmrcrFlcIRPa3ysyaPnY_7xPRnmYFeUecwpFF2VA.webp",
+    img: "https://i.namu.wiki/i/Dgd4z_2zeRIV01jCrpXmzQVbMgMqR4Y8J1yZSgrvm-jai78K0gZGsd8ZicNBv87AKjqu_x8JbQ7keRZJEiPBtKQD9KYHaN7hDymliFySZLzQFL5O10mAejcpB1K9Wgf9TE2raAu4G_Na3eshY5WXQQ.webp",
   },
   {
     title: "우정선 실종 사건",
     date: "",
     link: "https://namu.wiki/w/%EC%9A%B0%EC%A0%95%EC%84%A0%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.407114599999986, lng: 127.2575348 },
-    img: "https://i.namu.wiki/i/EmuVrxqSB-syIhlRoI2etKjs-CQlxk2GfUB3-qFBIIpgYmQktJJFuMomXyIsebxJvKc4FKWD7iFpva8Tb0Zf1DSvPuL_YDmbmR1EtlE0T9f1uwQiEwlM7ox3w8ib6D5Q3cqkKG0YpQVvW6GlLed_0w.webp",
+    img: "https://i.namu.wiki/i/5jPrWczYqA8GDr15YZ72ngBOQNx7y76zFFjSv81iORdMkQJ-ztsjMqaOlJO-os0ivWDr8bG1TmqDM_jYoTtc6nfpKsCH24Y9GBEgSzIFM7XjXRi2IpprFqGTdYe9Etyd5L0EWQS-HRlENUh0Zzj_GA.webp",
   },
   {
     title: "이방연 실종사건",
@@ -151,14 +151,14 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%9D%B4%EC%A2%85%EC%9A%B4%20%EB%B3%80%ED%98%B8%EC%82%AC%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.372737600000036, lng: 127.1228562 },
-    img: "https://i.namu.wiki/i/JkZ1xe3emxUAIqrmJblhrjrRl_lnMzVTol0rdIwM8E0mcDuBErT2yUkc_gXwix5cpfrVcF5-LiDRLKX38lnyS2MHGhMwTE_jyFFATlP6e2mZ2YxNGC0kIGo3mWOW0Jlm4KhAVtZUMXjPzg3N34-y7w.webp",
+    img: "https://i.namu.wiki/i/iweu0Y_KUbREvTu7vNw6NgnDXhWqHN5sNgmIjnOPBd9B3bmTIWPx_Kun7CkaXC448UBDfE1GMg5Um1MV8M2tBeGbPoKqXKIMUC25QAvpOAqT8pp37qOhTmmpyiqw2-mSrt2vfJtsafcQOfxFfrw6ag.webp",
   },
   {
     title: "전북대 수의대생 실종 사건",
     date: "",
     link: "https://namu.wiki/w/%EC%A0%84%EB%B6%81%EB%8C%80%20%EC%88%98%EC%9D%98%EB%8C%80%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.847770699999984, lng: 127.13022420000001 },
-    img: "https://i.namu.wiki/i/ghAstNl4aYXKEPyf4KOtQ4atgpY2EejWPsAQt5vzrnN4dOpfcN0ly9hxip7EZVqjFOnjcx9MG9gLcmpttBtoAG1yDvetcaVQ_gcVs3GoRTzBD1Uj_9WHNM9BtLR7z7rITFwz6yS8QHEK85SemhKbSQ.webp",
+    img: "https://i.namu.wiki/i/ZJw6Zq8HzWIWqhenuRsC2kxIuOtkT9t8NnEY_eAGXes0G6pF6UWINN7ddEew8W1FdmQCthYYIy3LmriZuPaydDLF_6_om1b9-xu-ns1Yy9DRecwXDYBXoUUa1r2IAd23TV9NInxjRHmG29LGkQ9Rhg.webp",
   },
   {
     title: "진천 초등학생 실종 사건",
@@ -172,7 +172,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%B2%9C%EC%95%88%20%EC%97%AC%EA%B3%A0%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.81561719999996, lng: 127.15176929999998 },
-    img: "https://i.namu.wiki/i/BZH30P2LBbaaCO9-2AK-0ltb02Ua66YZ2yaXr4xM4hwGnIilrSeNAOEQVbGHJQlupLKJzACNQAtF3blOvL-l10gdFs6DlSiZjC7CefHeuNvEBg2rU5BETo_-nKTPSRFEltpJUlWu8p_nID3rZ5fs_w.webp",
+    img: "https://i.namu.wiki/i/8hq-_Vwe1OU_u4H6ljj0gwUMLd8WHc0YNyF_yDT1Ezy7XPIqLkuj1ColUB5mHw8nHsIdjv4q5h3MN0j9RBVgPcL5nuv7dfJZi6KgHzsQXH1bMvv0LercMbSBN4ZfU2-YdscoIrwM-92qSdU0906R_A.webp",
   },
   {
     title: "청주 부녀자 실종사건",
@@ -186,7 +186,7 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%B2%AD%EC%A3%BC%20%EC%97%AC%EA%B3%A0%EC%83%9D%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.61415679999999, lng: 127.50773530000001 },
-    img: "https://i.namu.wiki/i/8B2ympLmwUzMFdRCx8BBosyN4t1pTUahF8MJQCPZAqLB2Jx6ClRBPwFv7VvBFXdbiUS16Ce5EsYE_c_6QciAG6zhrLCXw3WJWEAiqE09RZjZH2PvvvkyhGjunXiQ89GZYo8ZZM3tZ74kedGZhctRfw.webp",
+    img: "https://i.namu.wiki/i/Ab09lBAU49NFDDmEIYqR9x0T41hthHgYn9_TUUITXXaWLL8kr5x2gbf5E6gJfg_NxPlSjokPBINeVnvJ-oJkuyh0UBCEgTTXPKBZqj29mgxqBL-PsoJz2UIse70YerqUWF517RfPUi0ZgEkcEkMxfA.webp",
   },
   {
     title: "최준원 실종사건",
@@ -214,14 +214,14 @@ const missingCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%86%A1%ED%98%9C%ED%9D%AC%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.0537596, lng: 127.1088269 },
-    img: "https://i.namu.wiki/i/wZbppF22aYjWWVcc2boyuzBOSKhEW4dCOxqObhK5EPU6ZLE4QFpgk0qP9C5KX8IOw6bIekrcQHTLKLA1Kpzlcq_BHb6Dv3eNDTBFYCoNNqWDO9cSJlwUhVJqP0rsmmRIeVgSzYw6WyY1EVweKahXvQ.webp",
+    img: "https://i.namu.wiki/i/Yiqc-q94tKVc15LASyCQ5rr11ovP2XsDbvTdpJOxx-MuWopt2nb9boXLrBVv6pJGIGBTV-nk6s3ME1MqRYlLTYo8gjac5HXkbJlte9GSbsFtt3FKocyj4BJpFK1fDXlFtfvEkWq8oSnQBvTwoC2VDg.webp",
   },
   {
     title: "윤영실 실종 사건",
     date: "",
     link: "https://namu.wiki/w/%EC%9C%A4%EC%98%81%EC%8B%A4%20%EC%8B%A4%EC%A2%85%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 37.52714780000001, lng: 127.0334517 },
-    img: "https://i.namu.wiki/i/wi5CCP-UBSbwLHfpl1SoLxtHyCTcuqzoEYOthjqUIvQj5AVgbF31nbF69byafDaX1GdXKUnT-pZTPYAdftrZpSKk5ZVaG3rh6phuXvWZcbXiIpa6fGcm7rdl7t1KOG739ZTTfKQotwPxfMwjEdbe0A.webp",
+    img: "https://i.namu.wiki/i/aA51Mr2_S7KBzQzmxKrudngkgeEUUsr8BLoUbRadJotmJOzv56x42pu-fRcgxhlA_nxINtxfNuvM8SMUVyecfKmeD3sAGUihSqkuOI1speHQekJqkdAfaH1Nb3HQ82357IeqjzAc-PEPhXMPQpuc5A.webp",
   },
   {
     title: "조두형 유괴사건",

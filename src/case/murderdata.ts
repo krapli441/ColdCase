@@ -254,7 +254,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EC%88%9C%EC%B0%BD%20%EC%86%90%EB%AA%A9%EC%97%86%EB%8A%94%20%EB%B0%B1%EA%B3%A8%20%EC%82%AC%EC%B2%B4%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 35.4073449, lng: 127.10706720000002 },
-    img: "http://www.godemn.com/xe/files/attach/images/154361/103/156/faa562e9ac496bb42f27305ad06370e2.jpg",
+    img: "https://i.namu.wiki/i/wDS1ccdsGyX_4I3srf1dWQxD7MZxE_btObnB0OyoY7nWHb7FsN8izPJ3z1S__6efcAWlGdL_IZ4Lq2wMShYgksIkr2hh_HZT4O4B8_JqhtjjFyCQnYKurMXvXSxXtXPJ0u-SmQShSmf1-TFS81PlaA.webp",
   },
   {
     title: "신정동 연쇄폭행살인사건",
@@ -443,7 +443,7 @@ const murderCaseData = [
     date: "",
     link: "https://namu.wiki/w/%EB%8C%80%EC%B2%9C%20%EC%98%81%EC%9C%A0%EC%95%84%20%EC%97%B0%EC%87%84%EC%9C%A0%EA%B4%B4%EC%82%B4%EC%9D%B8%20%EC%82%AC%EA%B1%B4",
     latlng: { lat: 36.33316289999999, lng: 126.61294409999998 },
-    img: "https://i.namu.wiki/i/WKpkzm3lDAhbyPMr2-b6dbAevzORX57s8oenA8sCfLD-TlG2T87Ymdh5-zaL-QygoaQ3LAp6WFRX4JrtBCnG81QGba2IeGX4BmVdfqYYzn4uSf-wvqIHmpSGbtVGd3LSq8KvtW6I-HnxiPF9iw_cXA.jpg",
+    img: "https://i.namu.wiki/i/XVMfZGi0fHD-D3-DV8XFZjzJj1qAqq8CMinpzA_bSndaXBo4qaQ-ZA_Odpw-eDc-1LmUp8JT4q4JL_brvl5-X3fpQWoXUbuDAnTj1S8v-XC6SINcpCL90VzxT33CQFcs8IE1eUC0BC2166a-wOkl3Q.jpg",
   },
   {
     title: "부산 괘법동 태양다방 종업원 살인사건",
